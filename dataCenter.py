@@ -1,10 +1,5 @@
-# -*- coding:utf-8 -*-
-# AUTHOR:   yaolili
-# FILE:     graph.py
-# ROLE:     read graph from inputFile
-# CREATED:  2015-11-28 20:55:11
-# MODIFIED: 2015-12-04 09:43:50
 import numpy as np
+import networkx as nx
 class GraphSet:
 
     def __init__(self, inputFile):
@@ -12,13 +7,11 @@ class GraphSet:
         self.__vertexSet = []
         self.__edgeSet = []
         self.__VESet = {}
-        self.__adjMatrix = {}
-        self.__freEmbedding = {}
         try:
             with open(inputFile, "r") as fin:
                 lineNum = -1
                 curVertexSet = {}
-                curEdgeSet = {}
+                curEdgeSet = []
                 for line in fin:
                     lineList = line.strip().split(" ")
                     if not lineList:
@@ -38,7 +31,7 @@ class GraphSet:
                             # print "Class GraphSet __init__  __edgeSet: ", self.__edgeSet
                         lineNum += 1
                         curVertexSet = {}
-                        curEdgeSet = {}
+                        curEdgeSet = []
                     elif lineList[0] == 'v':
                         if len(lineList) != 3:
                             print
@@ -50,8 +43,8 @@ class GraphSet:
                             print
                             "Class GraphSet __init__() line edge error!"
                             exit()
-                        edgeKey = str(lineList[1]) + ":" + str(lineList[2])
-                        curEdgeSet[edgeKey] = int(lineList[3])
+                        curEdgeSet.append((int(lineList[1]), int(lineList[2]), int(lineList[3])))
+
                     else:
                         # empty line!
                         continue
@@ -88,14 +81,12 @@ class GraphSet:
             return self.__VESet[offset]
 
         vertexNum = len(self.__vertexSet[offset])
-        result = [[] for i in range(vertexNum)]
+        result = [{} for i in range(vertexNum)]
 
         for key in self.__edgeSet[offset]:
-            v1, v2 = key.strip().split(":")
-            # print int(v1)
-            # print int(v2)
-            result[int(v1)].append(key)
-            result[int(v2)].append(key)
+            v1, v2, e_label = key
+            result[v1][v2] = e_label
+            result[v2][v1] = e_label
         self.__VESet[offset] = result
         return result
 
@@ -107,92 +98,33 @@ class GraphSet:
 
         VESet = self.curVESet(offset)
         aList = VESet[vertexIndex]
-        neighborSet = []
-        for i in range(len(aList)):
-            v1, v2 = aList[i].strip().split(":")
-            if int(v1) != vertexIndex:
-                neighborSet.append(int(v1))
-            elif int(v2) != vertexIndex:
-                neighborSet.append(int(v2))
-            else:
-                exit()
+        neighborSet = list(aList.keys())
+
         return neighborSet
 
     def graphNum(self):
         return len(self.__vertexSet)
 
-    def curAdjMatrix(self, offset):
-        if offset in self.__adjMatrix.keys():
-            return self.__adjMatrix[offset]
-        node_num = len(self.curVSet(offset))
-        adj_matrix = np.zeros((node_num, node_num))
-        for i in range(node_num):
-            neighborSet = self.neighbor(offset, i)
-            for item in neighborSet:
-                edge = str(i)+":"+str(item)
-                label = 0
-                if edge in self.curESet((offset)).keys():
-                    label = self.curESet(offset)[str(i)+":"+str(item)]
-                else:
-                    label = self.curESet(offset)[str(item)+":"+str(i)]
-                adj_matrix[i, item] = label
-        adj_matrix /= 5
-        self.__adjMatrix[offset] = adj_matrix
-
-        return adj_matrix
-
-    def kNeighbor(self, offset, nodei, k):
+    def nodelListNeighbor(self, offset, nodel_list):
         # 首先获得对照表
-        reflect_dict = {0: nodei}
-        cnt = 1
-        # 获取这个点附近的k阶邻居
-        queue = [nodei]
-        layer = [0]
-        while len(queue) != 0:
-            nei_list = self.neighbor(offset, queue[-1])  # 取队头第一个元素
-            next_layer = layer[-1] + 1
-            if next_layer > k:
-                break
-            for nei in nei_list:
-                if nei not in reflect_dict.keys():
-                    reflect_dict[cnt] = nei
-                    cnt += 1
-                    queue.insert(0, nei)
-                    layer.insert(0, next_layer)
-                # print("nei of ", queue[0], nei)
-            queue.pop()
-            layer.pop()
+        Vset = set(nodel_list)
+        for nodei in nodel_list:
+            Vset.update(self.neighbor(offset, nodei))
 
-        reverse_reflect_dict = {old_i: new_i for new_i, old_i in reflect_dict.items()}
-        main_state = np.zeros((len(reflect_dict), len(reflect_dict)))
-        main_state[0, :] = 1
-        for new_idx, big_idx in reflect_dict.items():
-            neis = self.neighbor(offset, big_idx)
-            for nei in neis:
-                if nei in reflect_dict.values():
-                    nei_i = reverse_reflect_dict[nei]
-                    edge = str(big_idx) + ":" + str(nei)
-                    if edge in self.curESet(offset).keys():
-                        edge_label = self.curESet(offset)[edge]
-                    else:
-                        edge_label = self.curESet(offset)[str(nei) + ":" + str(big_idx)]
-                    main_state[nei_i, new_idx] = main_state[new_idx, nei_i] = edge_label
+        return list(Vset-set(nodel_list))
 
-        return main_state, reflect_dict
+    def getSubMap(self, offset, node_list):
+        oriEset = np.array(self.curESet(offset))
+        where_pos = np.isin(oriEset[:, 0], node_list) & np.isin(oriEset[:, 1], node_list)
+        Eset = oriEset[where_pos]  # n*3
 
-    def curFrequencyEmbedding(self, offset):
-        if offset in self.__freEmbedding.keys():
-            return self.__freEmbedding[offset]
-        label_list = np.array(list(self.curVSet(offset).values()))
-        max_label = 5
-        node_num = len(self.curVSet(offset))
-        fre_embedding = np.ones((node_num, max_label+1))
-        for i in range(node_num):
-            label = label_list[i]
-            f_label = len(np.where(label_list == label)[0])
-            fre_embedding[i, label] = f_label/node_num
-        self.__freEmbedding[offset] = fre_embedding
-        return fre_embedding
+        graph = nx.Graph()
+        node_attr_list = [(i, {"node_feature": self.curVSet(offset)[i]})for i in node_list]
+        graph.add_nodes_from(node_attr_list)
+        graph.add_edges_from([(a,b,{'edge_feature': c}) for a,b,c in Eset.tolist()])
+
+        return graph
+
 
 if __name__ == '__main__':
     import torch

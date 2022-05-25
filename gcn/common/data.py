@@ -31,9 +31,9 @@ def load_dataset(name):
         dataset = TUDataset(root="../data/cox2", name="COX2")
     elif name == "aids":
         dataset = TUDataset(root="../data/AIDS", name="AIDS")
-    elif name == "reddit-binary":
+    elif name == "reddit_binary":
         dataset = TUDataset(root="../data/REDDIT-BINARY", name="REDDIT-BINARY")
-    elif name == "imdb-binary":
+    elif name == "imdb_binary":
         dataset = TUDataset(root="../data/IMDB-BINARY", name="IMDB-BINARY")
     elif name == "firstmm_db":
         dataset = TUDataset(root="../data/FIRSTMM_DB", name="FIRSTMM_DB")
@@ -126,18 +126,8 @@ class OTFSynDataSource(DataSource):
                         d = 1 if train else 0
                         size = random.randint(self.min_size + offset - d,
                                               len(graph.G) - 1 + offset)
-                start_node = random.choice(list(graph.G.nodes))
-                neigh = [start_node]
-                frontier = list(set(graph.G.neighbors(start_node)) - set(neigh))
+                _, neigh = utils.sample_neigh([graph.G], size)
 
-                visited = set([start_node])
-                while len(neigh) < size:
-                    new_node = random.choice(list(frontier))
-                    assert new_node not in neigh
-                    neigh.append(new_node)
-                    visited.add(new_node)
-                    frontier += list(graph.G.neighbors(new_node))
-                    frontier = [x for x in frontier if x not in visited]
                 if self.node_anchored:
                     anchor = neigh[0]
                     for v in graph.G.nodes:
@@ -270,7 +260,6 @@ class OTFSynImbalancedDataSource(OTFSynDataSource):
                 pickle.dump((pos_a, pos_b, neg_a, neg_b), f)
             print("saved", fn)
 
-        print(len(pos_a), len(neg_a))
         # if pos_a:
         pos_a = utils.batch_nx_graphs(pos_a)
         pos_b = utils.batch_nx_graphs(pos_b)
@@ -349,11 +338,10 @@ class DiskDataSource(DataSource):
             neigh_a, neigh_b = graph_a.subgraph(a), graph_b.subgraph(b)
             if filter_negs:
                 matcher = nx.algorithms.isomorphism.GraphMatcher(neigh_a, neigh_b)
-                if matcher.subgraph_is_isomorphic(): # a <= b (b is subgraph of a)
+                if matcher.subgraph_is_isomorphic():  # a <= b (b is subgraph of a)
                     continue
             neg_a.append(neigh_a)
             neg_b.append(neigh_b)
-
         pos_a = utils.batch_nx_graphs(pos_a, anchors=pos_a_anchors if
             self.node_anchored else None)
         pos_b = utils.batch_nx_graphs(pos_b, anchors=pos_b_anchors if
@@ -369,14 +357,15 @@ if __name__ == "__main__":
     import matplotlib.pyplot as plt
 
     plt.rcParams.update({"font.size": 14})
-    data_source = DiskDataSource(dataset_name="proteins", node_anchored=True)
-    print("load proteins!!")
+    data_source = DiskDataSource(dataset_name="aids", node_anchored=True)
+    print("load aids!!")
     loaders = data_source.gen_data_loaders(size=100, batch_size=10, train=True)
     print("dataloader finish")
     for batch_target, batch_neg_target, batch_neg_query in zip(*loaders):
         pos_a, pos_b, neg_a, neg_b = data_source.gen_batch(batch_target,
                                                            batch_neg_target, batch_neg_query, False)
-        print("one batch",pos_a)
+        print("one batch",pos_b)
+        pos_b = utils.batch_nx_graphs(pos_b, anchors=None)
 
     # i = 11
     # neighs = [utils.sample_neigh(train, i) for j in range(10000)]

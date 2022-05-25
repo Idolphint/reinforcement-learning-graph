@@ -206,5 +206,5 @@ if __name__ == '__main__':
     # write_data("Q4_20_20.my", gS, vS, eS)
     # gen_data("Q1000", 6, edge_pro=0.5)
     # sub2Main("Q1000_node6.data")
-    Main2sub(1000, 20, 1000, 10, big_edge_pro=30) 
+    Main2sub(1200, 29, 1000, 10, big_edge_pro=30)
 

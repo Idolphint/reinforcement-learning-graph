@@ -20,21 +20,18 @@ def sample_neigh(graphs, size):
     ps = np.array([len(g) for g in graphs], dtype=np.float)
     ps /= np.sum(ps)
     dist = stats.rv_discrete(values=(np.arange(len(graphs)), ps))
-    g_id_visit = set()
+    cannot_find=0
     max_neigh = []
     max_graph = None
     while True:
-        idx = dist.rvs()
         # graph = random.choice(graphs)
-        if idx not in g_id_visit:
-            graph = graphs[idx]
-            g_id_visit.add(idx)
-        elif len(g_id_visit) == len(graphs):
-            print("all visit,look graph nei", len(graphs), len(graph), len(neigh))
+        if cannot_find > 30:
+            # print("visit too many time", max_graph.edges, max_neigh)
             return max_graph, max_neigh
-        else:
-            continue
+        idx = dist.rvs()
+        graph = graphs[idx]
         start_node = random.choice(list(graph.nodes))
+
         neigh = [start_node]
         frontier = list(set(graph.neighbors(start_node)) - set(neigh))
         visited = {start_node}
@@ -51,6 +48,7 @@ def sample_neigh(graphs, size):
         if len(neigh) > len(max_neigh):
             max_neigh = neigh
             max_graph = graph
+        cannot_find += 1
 
 
 cached_masks = None

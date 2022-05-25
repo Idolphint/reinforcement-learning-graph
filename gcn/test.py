@@ -1,4 +1,4 @@
-from common import utils
+from gcn.common import utils
 from collections import defaultdict
 from datetime import datetime
 from sklearn.metrics import roc_auc_score, confusion_matrix
@@ -105,8 +105,6 @@ def validation(args, model, test_pts, logger, batch_n, epoch, verbose=False):
         logger.add_scalar("TN/test", tn, batch_n)
         logger.add_scalar("FP/test", fp, batch_n)
         logger.add_scalar("FN/test", fn, batch_n)
-        print("Saving {}".format(args.model_path))
-        torch.save(model.state_dict(), args.model_path)
 
     if verbose:
         conf_mat_examples = defaultdict(list)
@@ -124,6 +122,7 @@ def validation(args, model, test_pts, logger, batch_n, epoch, verbose=False):
                     conf_mat_examples[correct, pred[idx]].append((a, b))
                     idx += 1
 
+    return acc
 if __name__ == "__main__":
     from gcn.train import main
     main(force_test=True)

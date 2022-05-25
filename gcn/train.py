@@ -37,7 +37,16 @@ def build_model(args):
         print("model load from", args.model_path)
     return model
 
-def make_data_source(args):
+def make_data_source(args, data_idx=-1):
+    if isinstance(args.dataset, list):
+        if data_idx == -1:
+            print("请指定使用数据集列表中的哪个")
+            return None
+        else:
+            data_source = data.DiskDataSource(args.dataset[data_idx],
+                                node_anchored=args.node_anchored)
+            return data_source
+
     toks = args.dataset.split("-")
     if toks[0] == "syn":
         if len(toks) == 1 or toks[1] == "balanced":
@@ -72,51 +81,56 @@ def train(args, model, logger, in_queue, out_queue):
         clf_opt = optim.Adam(model.clf_model.parameters(), lr=args.lr)
 
     done = False
-    while not done:
-        data_source = make_data_source(args)
-        loaders = data_source.gen_data_loaders(args.eval_interval *
-            args.batch_size, args.batch_size, train=True)
-        for batch_target, batch_neg_target, batch_neg_query in zip(*loaders):
-            msg, _ = in_queue.get()
-            if msg == "done":
-                done = True
-                break
-            # train
-            model.train()
-            model.zero_grad()
-            pos_a, pos_b, neg_a, neg_b = data_source.gen_batch(batch_target,
-                batch_neg_target, batch_neg_query, True)
-            emb_pos_a, emb_pos_b = model.emb_model(pos_a), model.emb_model(pos_b)
-            emb_neg_a, emb_neg_b = model.emb_model(neg_a), model.emb_model(neg_b)
+    step = 0
+    for data_idx in range(len(args.dataset)):
+        while not done:
+            data_source = make_data_source(args, data_idx)
+            loaders = data_source.gen_data_loaders(args.eval_interval *
+                args.batch_size, args.batch_size, train=True)
+            for batch_target, batch_neg_target, batch_neg_query in zip(*loaders):
+                msg, _ = in_queue.get()
+                step += 1
+                if msg == "done":
+                    done = True
+                    break
+                # train
+                model.train()
+                model.zero_grad()
+                pos_a, pos_b, neg_a, neg_b = data_source.gen_batch(batch_target,
+                    batch_neg_target, batch_neg_query, True)
+                emb_pos_a, emb_pos_b = model.emb_model(pos_a), model.emb_model(pos_b)
+                emb_neg_a, emb_neg_b = model.emb_model(neg_a), model.emb_model(neg_b)
 
-            emb_as = torch.cat((emb_pos_a, emb_neg_a), dim=0)
-            emb_bs = torch.cat((emb_pos_b, emb_neg_b), dim=0)
-            labels = torch.tensor([1]*pos_a.num_graphs + [0]*neg_a.num_graphs).to(
-                utils.get_device())
-            intersect_embs = None
-            pred = model(emb_as, emb_bs)
-            loss = model.criterion(pred, intersect_embs, labels)
-            loss.backward()
-            torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
-            opt.step()
-            if scheduler:
-                scheduler.step()
+                emb_as = torch.cat((emb_pos_a, emb_neg_a), dim=0)
+                emb_bs = torch.cat((emb_pos_b, emb_neg_b), dim=0)
+                labels = torch.tensor([1]*pos_a.num_graphs + [0]*neg_a.num_graphs).to(
+                    utils.get_device())
+                intersect_embs = None
+                pred = model(emb_as, emb_bs)
+                loss = model.criterion(pred, intersect_embs, labels)
+                loss.backward()
+                torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
+                opt.step()
+                if scheduler:
+                    scheduler.step()
 
-            if args.method_type == "order":
-                with torch.no_grad():
-                    pred = model.predict(pred)
-                model.clf_model.zero_grad()
-                pred = model.clf_model(pred.unsqueeze(1))
-                criterion = nn.NLLLoss()
-                clf_loss = criterion(pred, labels)
-                clf_loss.backward()
-                clf_opt.step()
-            pred = pred.argmax(dim=-1)
-            acc = torch.mean((pred == labels).type(torch.float))
-            train_loss = loss.item()
-            train_acc = acc.item()
+                if args.method_type == "order":
+                    with torch.no_grad():
+                        pred = model.predict(pred)
+                    model.clf_model.zero_grad()
+                    pred = model.clf_model(pred.unsqueeze(1))
+                    criterion = nn.NLLLoss()
+                    clf_loss = criterion(pred, labels)
+                    clf_loss.backward()
+                    clf_opt.step()
+                pred = pred.argmax(dim=-1)
+                acc = torch.mean((pred == labels).type(torch.float))
+                train_loss = loss.item()
+                train_acc = acc.item()
+                if args.method_type == "order":
+                    train_loss += clf_loss.item()
 
-            out_queue.put(("step", (loss.item(), acc)))
+                out_queue.put(("step", (train_loss, train_acc)))
 
 def train_loop(args):
     if not os.path.exists(os.path.dirname(args.model_path)):
@@ -143,14 +157,14 @@ def train_loop(args):
     else:
         clf_opt = None
 
-    data_source = make_data_source(args)
+    data_source = make_data_source(args, 0)
     workers = []
+    best_acc = 0
     for i in range(args.n_workers):
         worker = mp.Process(target=train, args=(args, model, data_source,
             in_queue, out_queue))
         worker.start()
         workers.append(worker)
-
     loaders = data_source.gen_data_loaders(args.val_size, args.batch_size,
                                            train=False, use_distributed_sampling=False)
     test_pts = []
@@ -163,22 +177,29 @@ def train_loop(args):
         neg_a = neg_a.to(torch.device("cpu"))
         neg_b = neg_b.to(torch.device("cpu"))
         test_pts.append((pos_a, pos_b, neg_a, neg_b))
+    print("test data ready")
     if args.test:
         validation(args, model, test_pts, logger, 0, 0, verbose=True)
     else:
-        batch_n = 0
+        print("begin train")
         for epoch in range(args.n_batches // args.eval_interval):
+            batch_n = 0
             for i in range(args.eval_interval):
                 in_queue.put(("step", None))
             for i in range(args.eval_interval):
                 msg, params = out_queue.get()
                 train_loss, train_acc = params
-                print("Batch {}. Loss: {:.4f}. Training acc: {:.4f}".format(
-                    batch_n, train_loss, train_acc), end="               \r")
+                if batch_n % 100 == 0:
+                    print("Batch {}. Loss: {:.4f}. Training acc: {:.4f}".format(
+                        batch_n, train_loss, train_acc))
                 logger.add_scalar("Loss/train", train_loss, batch_n)
                 logger.add_scalar("Accuracy/train", train_acc, batch_n)
                 batch_n += 1
-            validation(args, model, test_pts, logger, batch_n, epoch)
+            acc = validation(args, model, test_pts, logger, batch_n, epoch)
+            if acc > best_acc:
+                print("Saving {}, test acc {}".format(args.model_path, acc))
+                torch.save(model.state_dict(), args.model_path)
+                best_acc = acc
 
     for i in range(args.n_workers):
         in_queue.put(("done", None))

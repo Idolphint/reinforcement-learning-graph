@@ -44,13 +44,13 @@ def parse_encoder(parser, arg_str=None):
 
     enc_parser.set_defaults(conv_type='SAGE',
                             method_type='order',
-                            dataset='proteins-balanced',  # [proteins,cox2,aids,reddit-binary,imdb-binary,firstmm_db,dblp,qm9]
-                            n_layers=8,
-                            batch_size=64,
+                            dataset=['reddit_binary', 'proteins','cox2','aids','imdb_binary','firstmm_db','dblp','qm9'],
+                            n_layers=4,
+                            batch_size=32,
                             hidden_dim=64,
                             skip="learnable",
                             dropout=0.0,
-                            n_batches=1000000,
+                            n_batches=100000,
                             opt='adam',  # opt_enc_parser
                             opt_scheduler='none',
                             opt_restart=100,
@@ -59,7 +59,7 @@ def parse_encoder(parser, arg_str=None):
                             margin=0.1,
                             test_set='',
                             eval_interval=5000,
-                            n_workers=4,
+                            n_workers=1,
                             model_path="ckpt/model.pt",
                             load_model=True,
                             tag='',
@@ -67,3 +67,10 @@ def parse_encoder(parser, arg_str=None):
                             node_anchored=True)
 
     # return enc_parser.parse_args(arg_str)
+
+def get_default_config():
+    parser = argparse.ArgumentParser(description='Order embedding arguments')
+    parse_encoder(parser)
+    args = parser.parse_args()
+
+    return args

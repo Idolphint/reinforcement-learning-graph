@@ -124,12 +124,15 @@ class SkipLastGNN(nn.Module):
             post_input_dim *= 3
         self.post_mp = nn.Sequential(
             nn.Linear(post_input_dim, hidden_dim), nn.Dropout(args.dropout),
+            # nn.BatchNorm1d(hidden_dim, eps=1e-5, momentum=0.1),
             nn.LeakyReLU(0.1),
             nn.Linear(hidden_dim, output_dim),
+            # nn.BatchNorm1d(output_dim, eps=1e-5, momentum=0.1),
             nn.ReLU(),
-            nn.Linear(hidden_dim, 256), nn.ReLU(),
-            nn.Linear(256, hidden_dim))
-        #self.batch_norm = nn.BatchNorm1d(output_dim, eps=1e-5, momentum=0.1)
+            nn.Linear(hidden_dim, 256), nn.Sigmoid(),
+            # nn.BatchNorm1d(256, eps=1e-5, momentum=0.1),
+            nn.Linear(256, hidden_dim), nn.Sigmoid())
+        # self.batch_norm = nn.BatchNorm1d(output_dim, eps=1e-5, momentum=0.1)
         self.skip = args.skip
         self.conv_type = args.conv_type
 
@@ -155,7 +158,9 @@ class SkipLastGNN(nn.Module):
         else:
             print("unrecognized model type")
 
-    def forward(self, data):
+    def forward(self, data, need_pool=True):
+        # 输入是data,包括了点feature，边对edge_index, batch用来标记哪些点属于一个batch，size=node数，值=第？个batch
+        # in feature = 1
         #if data.x is None:
         #    data.x = torch.ones((data.num_nodes, 1), device=utils.get_device())
 
@@ -165,8 +170,11 @@ class SkipLastGNN(nn.Module):
                 data = self.feat_preprocess(data)
                 data.preprocessed = True
         x, edge_index, batch = data.node_feature, data.edge_index, data.batch
-        # n*1
-        x = self.pre_mp(x)  # n * 64
+        edge_weight = data.edge_feature
+        if len(x.shape) == 1:
+            x = x.unsqueeze(dim=1).float()
+        # n*1 这里的edge就是节点对，2*n_edge
+        x = self.pre_mp(x)  # n * 64 先将node_label编码为64维的向量
         all_emb = x.unsqueeze(1)  # n* 1* 64
         emb = x
         for i in range(len(self.convs_sum) if self.conv_type=="PNA" else
@@ -181,16 +189,16 @@ class SkipLastGNN(nn.Module):
                         self.convs_mean[i](curr_emb, edge_index),
                         self.convs_max[i](curr_emb, edge_index)), dim=-1)
                 else:
-                    x = self.convs[i](curr_emb, edge_index)
+                    x = self.convs[i](curr_emb, edge_index, edge_weight)
             elif self.skip == 'all':
                 if self.conv_type == "PNA":
                     x = torch.cat((self.convs_sum[i](emb, edge_index),
                         self.convs_mean[i](emb, edge_index),
                         self.convs_max[i](emb, edge_index)), dim=-1)
                 else:
-                    x = self.convs[i](emb, edge_index)
+                    x = self.convs[i](emb, edge_index, edge_weight)
             else:
-                x = self.convs[i](x, edge_index)
+                x = self.convs[i](x, edge_index, edge_weight)
             x = F.relu(x)
             x = F.dropout(x, p=self.dropout, training=self.training)
             emb = torch.cat((emb, x), 1)
@@ -198,9 +206,11 @@ class SkipLastGNN(nn.Module):
                 all_emb = torch.cat((all_emb, x.unsqueeze(1)), 1)
 
         # x = pyg_nn.global_mean_pool(x, batch)
-        emb = pyg_nn.global_add_pool(emb, batch)
+        if need_pool:
+            emb = pyg_nn.global_add_pool(emb, batch)
         emb = self.post_mp(emb)
-        #emb = self.batch_norm(emb)   # TODO: test
+        # print("after post mp", emb, emb.shape)
+        # emb = self.batch_norm(emb)   # TODO: test
         #out = F.log_softmax(emb, dim=1)
         return emb
 
