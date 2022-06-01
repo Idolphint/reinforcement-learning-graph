@@ -21,6 +21,7 @@ class GNN_env(object):
         self.small_n = int(small_n[-4:])
         max_label = int(max_l[-7:-5])
         self.gt_json = json.load(open(gt_json, 'r'))
+        self.combo = [-1,-1,-1, 0]
 
     def add_node2_state(self, offs, offb, subG, mainG, action):
         # state是一个adj+fre的矩阵，将新节点的邻居和fre添加到ori_state里面
@@ -42,6 +43,7 @@ class GNN_env(object):
     def reset(self, offset, offJ):
         print("开始reset")
         self.result = {}
+        self.combo = [1,-1,-1, 0]
         sub_Vset = self.__sub.curVSet(offJ)
         main_Vset = self.__origin.curVSet(offset)
         gt_dict = self.gt_json[self.small_n*offset+offJ]
@@ -221,18 +223,15 @@ class GNN_env(object):
 
         r1_reward = self.vf2Match(offset, offJ, action[1], action[0])
         subG, mainG = self.add_node2_state(offJ, offset, subG, mainG, action)
-
+        self.combo[-1] += 1
+        self.combo[self.combo[-1] % 3] = r1_reward
         done = 0
-        reward = r1_reward
+        reward = r1_reward + (sum(self.combo[:-1]) == 3)
         curMap = Map(self.result)
         if curMap.isCovered(self.__sub.curVSet(offJ)):
             done = 1
         return subG, mainG, reward, done, r1_reward
 
 if __name__ == '__main__':
-    a = np.zeros((3,4,5))
-    pos = np.array([[0,2], [1,3]])
-    print(pos[:,0])
-    pos_w = [range(3), pos[:,0], pos[:,1]]
-    a[pos_w] = 1
-    print(a)
+    a = [1,1,1,120]
+    print(sum(a[:-1]))

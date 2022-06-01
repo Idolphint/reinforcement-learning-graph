@@ -13,14 +13,14 @@ import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
 from model import NTN, Critic
-from util import nx2batch, get_order_model, vis_graph_match
+from util import get_order_model, vis_graph_match, nx2batch
 from config import args
 from tensorboardX import SummaryWriter
 from dataCenter import GraphSet
 import networkx as nx
-device = 'cuda:2' if torch.cuda.is_available() else 'cpu'
-print("uding device: ", device)
-
+device = 'cuda:3' if torch.cuda.is_available() else 'cpu'
+print("using device: ", device)
+torch.autograd.set_detect_anomaly(True)
 
 # Set seeds
 # env.seed( args['seed'])
@@ -28,9 +28,9 @@ print("uding device: ", device)
 # np.random.seed(args['seed'])
 # 设置数据集为真实数据集
 
-f1="data/graphdb_node1000.data"
-f2="data/Q_node20_n1000.data"
-gt_json = "data/gt_datanode1000_querynode20_query1000_maxlabel10.json"
+f1="data/graphdb_node1200.data"
+f2="data/Q_node29_n1000.data"
+gt_json = "data/gt_datanode1200_querynode29_query1000_maxlabel10.json"
 script_name = os.path.basename(__file__)
 #env = gym.make(args['env_name'])  # 这里给出了当前状态，action之间的转变等
 origin_graph = GraphSet(f1)
@@ -45,8 +45,8 @@ directory = './exp' + script_name + args['env_name'] + \
 os.makedirs(directory, exist_ok=True)
 load_dir = './exp' + script_name + args['env_name'] + '/' + args['load'] + '/'
 model_args = get_default_config()
-
 order_model = get_order_model(model_args)
+
 '''
 Implementation of TD3 with pytorch 
 Original paper: https://arxiv.org/abs/1802.09477
@@ -81,11 +81,11 @@ class Replay_buffer():
             y.append(Y)
             nx.append(NX)
             ny.append(NY)
-            u.append(np.array(U, copy=False))
+            u.append(U)
             r.append(np.array(R, copy=False))
             d.append(np.array(D, copy=False))
 
-        return x, y, nx, ny, np.array(u), np.array(r).reshape(-1, 1), np.array(d).reshape(-1, 1)
+        return x, y, nx, ny, u, np.array(r).reshape(-1, 1), np.array(d).reshape(-1, 1)
 
 
 def NodeNorm(feature):
@@ -102,28 +102,25 @@ class Actor(nn.Module):
     # out shape: [batch, big_n, sub_n]
     def __init__(self):
         super(Actor, self).__init__()
-        self.order_model = order_model
 
-        self.similar = NTN(k=1,D=64)
+        self.NTN = NTN(k=1,D=64)
 
     def forward(self, subNMNeighbor, gNMNeighbor, ori_fea_s, ori_fea_b):
-        # 先选小图点
         sub_mask_n = subNMNeighbor.mask
         big_mask_n = gNMNeighbor.mask
 
-        fea_s = ori_fea_s[sub_mask_n:, :]
-        fea_b = ori_fea_b[big_mask_n:, :]
         # print("check order output", fea_b)
-        similar = self.similar(fea_s, fea_b)
-        n,_,s,b = similar.shape
+        similar = self.NTN(ori_fea_s, ori_fea_b)
+        n, _, s, b = similar.shape
         # print(similar)
-        similar = similar.reshape(s*b)  # 这里认为k=1
+        similar = similar.reshape(s, b)  # 这里认为k=1
 
-        action = torch.argmax(similar)
+        sim_flatten = similar.reshape(s * b)
+        action = torch.argmax(sim_flatten)
         action = action.item()
-        res_action = [0,0]
-        res_action[0] = list(subNMNeighbor.nodes())[sub_mask_n+(action//b)]
-        res_action[1] = list(gNMNeighbor.nodes())[big_mask_n+(action%b)]
+        res_action = [0, 0]
+        res_action[0] = list(subNMNeighbor.nodes())[sub_mask_n + (action // b)]
+        res_action[1] = list(gNMNeighbor.nodes())[big_mask_n + (action % b)]
 
         return res_action, similar
 
@@ -137,18 +134,18 @@ class TD3():
         self.critic_1_target = Critic(model_args).to(device)
         self.critic_2 = Critic(model_args).to(device)
         self.critic_2_target = Critic(model_args).to(device)
-        self.emb_model = order_model.emb_model
+        self.emb_model = order_model.emb_model.to(device)
 
         self.actor_optimizer = optim.Adam([
             {'params': self.actor.parameters()},
-            {'params': self.emb_model.parameters()}], lr=args['learning_rate'])
+            {'params': self.emb_model.parameters()}
+        ],
+            lr=args['learning_rate'])
         self.critic_1_optimizer = optim.Adam([
-            {'params':self.critic_1.parameters()},
-            {'params':self.emb_model.parameters()}
+            {'params':self.critic_1.parameters()}
         ], lr=args['learning_rate'])
         self.critic_2_optimizer = optim.Adam([
-            {'params':self.critic_2.parameters()},
-            {'params':self.emb_model.parameters()}
+            {'params':self.critic_2.parameters()}
         ], lr=args['learning_rate'])
 
         self.actor_target.load_state_dict(self.actor.state_dict())
@@ -161,9 +158,16 @@ class TD3():
         self.num_actor_update_iteration = 0
         self.num_training = 0
 
+    def emb_graph(self, graph):
+        x = self.emb_model(nx2batch(graph, device), need_pool=False)
+        mask_n = graph.mask
+        fea = x[mask_n:, :]
+
+        return fea
+
     def select_action(self, subNMNeighbor, gNMNeighbor):
-        sub_emb = self.emb_model(nx2batch(subNMNeighbor, device), need_pool=False)
-        main_emb = self.emb_model(nx2batch(gNMNeighbor, device), need_pool=False)
+        sub_emb = self.emb_graph(subNMNeighbor)
+        main_emb = self.emb_graph(gNMNeighbor)
         return self.actor(subNMNeighbor, gNMNeighbor, sub_emb, main_emb)
 
     def update(self, num_iteration):
@@ -172,19 +176,27 @@ class TD3():
             print("model has been trained for {} times...".format(self.num_training))
             print("====================================")
         for i in range(num_iteration):
-            x, y, nx, ny, u, r, d = self.memory.sample(args['batch_size']) #在这里采样，说明这里存储了数据
+            x, y, nx, ny, u, r, d = self.memory.sample(1) #在这里采样，说明这里存储了数据
+            x, y, nx, ny, u, r, d = x[0], y[0], nx[0], ny[0], u[0], r[0], d[0]
             start_time = time.time()
             time_begin = start_time
             done = torch.FloatTensor(d).to(device)
             reward = torch.FloatTensor(r).to(device)
             # Compute target Q-value:
-            emb_ns = self.emb_model(nx2batch(nx, device))
-            emb_nb = self.emb_model(nx2batch(ny, device))
-            target_Q1 = self.critic_1_target(emb_nb, emb_ns)
-            target_Q2 = self.critic_2_target(emb_nb, emb_ns)
-            target_Q = torch.min(target_Q1, target_Q2)
-
+            emb_s = self.emb_graph(x)
+            emb_b = self.emb_graph(y)
+            if not d:
+                emb_ns = self.emb_graph(nx)
+                emb_nb = self.emb_graph(ny)
+                _, next_simi = self.actor_target(nx, ny, emb_ns, emb_nb)
+                target_Q1 = self.critic_1_target(emb_ns, emb_nb, next_simi)
+                target_Q2 = self.critic_2_target(emb_ns, emb_nb, next_simi)
+                target_Q = torch.min(target_Q1, target_Q2)
+            else:
+                target_Q = torch.zeros(1,1).to(device)
+            # print("before target Q", target_Q)
             target_Q = reward + ((1 - done) * args['gamma'] * target_Q).detach()
+            # print("after atrget Q", target_Q)
 
             #意为，如果猜对了那reward更大，如果猜错了，reward更小
             # 希望target_Q输出1附近的值，不要太大
@@ -192,44 +204,49 @@ class TD3():
             # print("准备数据耗时：", time_end-time_begin)
             time_begin = time_end
             # Optimize Critic 1:
-            emb_s = self.emb_model(nx2batch(x, device))
-            emb_b = self.emb_model(nx2batch(y, device))
-            current_Q1 = self.critic_1(emb_b, emb_s)
-            c1_loss = self.critic_1.criterion(emb_b, emb_s, reward)
+            current_Q1 = self.critic_1(emb_s, emb_b, u.detach())
+            # c1_loss = self.critic_1.criterion(emb_b, emb_s, reward)
 
-            loss_Q1 = torch.mean(F.mse_loss(current_Q1, target_Q)+c1_loss)
+            loss_Q1 = torch.mean(F.mse_loss(current_Q1, target_Q))#+c1_loss)
             # print("loss Q1", loss_Q1)
-            loss_Q1.requires_grad_(True)
             self.critic_1_optimizer.zero_grad()
-            loss_Q1.backward()
-            self.critic_1_optimizer.step()
+            loss_Q1.backward(retain_graph=True)
             self.writer.add_scalar('Loss/Q1_loss', loss_Q1, global_step=self.num_critic_update_iteration)
 
             # Optimize Critic 2:
-            current_Q2 = self.critic_2(emb_b, emb_s)
-            c2_loss = self.critic_2.criterion(emb_b, emb_s, reward)
-            loss_Q2 = torch.mean(F.mse_loss(current_Q2, target_Q) + c2_loss)
-            loss_Q2.requires_grad_(True)
+            current_Q2 = self.critic_2(emb_s, emb_b, u.detach())
+            # c2_loss = self.critic_2.criterion(emb_b, emb_s, reward)
+            loss_Q2 = torch.mean(F.mse_loss(current_Q2, target_Q)) # + c2_loss)
             # print("loss_Q2", loss_Q2)
             self.critic_2_optimizer.zero_grad()
-            loss_Q2.backward()
-            self.critic_2_optimizer.step()
+            loss_Q2.backward(retain_graph=True)
+
             self.writer.add_scalar('Loss/Q2_loss', loss_Q2, global_step=self.num_critic_update_iteration)
             time_end = time.time()
-            # print("检查计算出的数值是否符合要求: reward: , ", reward,
-            #       "target_q: ", target_Q, ", q1: , q2: ,", current_Q1, current_Q2,
-            #       " c1_loss(更新order): ， lossq1: ", c1_loss, loss_Q1)
+            if self.num_critic_update_iteration % 10000 == 0:
+                print("检查计算出的数值是否符合要求: reward: , ", reward,
+                      "target_q: ", target_Q, ", q1: , q2: ,", current_Q1, current_Q2,
+                      " c1_loss(更新order): ， lossq1: ", loss_Q1)
             # print("计算q1,q2耗时：", time_end- time_begin)
             time_begin = time_end
             # Delayed policy updates:
             if i % args['policy_delay'] == 0:
                 # Compute actor loss:
-                actor_loss = self.critic_1(emb_b, emb_s)
+                _, simi = self.actor(x, y, emb_s, emb_b)
+                if self.num_actor_update_iteration // 100 % 2 == 0:
+                    actor_loss = self.critic_1(emb_s.detach(), emb_b.detach(), simi)
+                else:
+                    actor_loss = self.critic_1(emb_s, emb_b, simi.detach())
+                if self.num_critic_update_iteration % 10000 == 0:
+                    print("Q1", actor_loss, actor_loss.shape)
+                    print("simi", simi,simi.shape)
                 actor_loss = - actor_loss.mean()   #希望reward越大越好
-                actor_loss.requires_grad_(True)
+                # actor_loss.requires_grad_(True)
                 # Optimize the actor
                 self.actor_optimizer.zero_grad()
                 actor_loss.backward()
+                self.critic_1_optimizer.step()
+                self.critic_2_optimizer.step()
                 self.actor_optimizer.step()
                 time_end = time.time()
                 # print("actor loss耗时", time_end-time_begin)
@@ -248,6 +265,9 @@ class TD3():
                 time_end = time.time()
                 # print("转移权重耗时：", time_end-time_begin)
                 time_begin = time_end
+            else:
+                self.critic_1_optimizer.step()
+                self.critic_2_optimizer.step()
             # print("一次update总耗时：", time_end - start_time)
         self.num_critic_update_iteration += 1
         self.num_training += 1
@@ -275,6 +295,7 @@ class TD3():
         self.critic_2.load_state_dict(torch.load(dir + 'critic_2.pth'))
         self.critic_2_target.load_state_dict(torch.load(dir + 'critic_2_target.pth'))
         self.emb_model.load_state_dict(torch.load(dir + 'emb_model.pth'))
+        # print("not load embed model")
         print("====================================")
         print("model has been loaded...")
         print("====================================")
@@ -286,13 +307,18 @@ def main():
 
     if args['mode'] == 'test':
         agent.load(load_dir)
+        num_pred = 0
+        acc_num = 0
         pred_res_list = {}
         one_pred = []
         for i in range(origin_graph.graphNum()):
             for j in range(sub_graph.graphNum()):
-                subG, mainG = env.reset(i,j, gt_json)
+                subG, mainG = env.reset(i,j)
+                acc_num+=1
+                num_pred+=1
                 if subG is None or len(subG)==0:
                     print("主图和子图没有匹配上的，应该直接返回")
+                    num_pred += 20
                     continue
                 for t in count():
                     action, similar = agent.select_action(subG, mainG)
@@ -301,6 +327,8 @@ def main():
                     #     print("test action", action)
                     next_subG, next_mainG, reward, done, r1_reward = env.step(i, j, action, subG, mainG)
                     ep_r += reward
+                    num_pred += 1
+                    acc_num += (r1_reward == 1)
                     # env.render()
                     if done or t == args['max_episode']:
                         pred_res_list['B%dS%d'%(i,j)] = one_pred
@@ -313,7 +341,7 @@ def main():
                         break
                     subG = next_subG
                     mainG = next_mainG
-
+        print("共%d次决策，其中%d次决策正确，准确率为%.4f"%(num_pred, acc_num, acc_num / num_pred))
         with open('res/'+args['load']+'.json', 'w') as fin:
             json.dump(pred_res_list, fin)
             print("save res")
@@ -342,11 +370,11 @@ def main():
                     next_subG, next_mainG, reward, done, r1_reward = env.step(i, j,
                                             action, subG, mainG)
                     ep_r += reward
-                    agent.memory.push((subG, mainG, next_subG, next_mainG, action, reward, np.float16(done)))
+                    agent.memory.push((subG, mainG, next_subG, next_mainG, similar, reward, np.float16(done)))
                     if j+1 % 10 == 0:
                         print('Episode {},  The memory size is {} '.format(i, len(agent.memory.storage)))
                     if len(agent.memory.storage) >= args['capacity']-1:
-                        agent.update(5)
+                        agent.update(10)
 
                     subG = next_subG
                     mainG = next_mainG

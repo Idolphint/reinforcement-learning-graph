@@ -44,7 +44,7 @@ def parse_encoder(parser, arg_str=None):
 
     enc_parser.set_defaults(conv_type='SAGE',
                             method_type='order',
-                            dataset=['reddit_binary', 'proteins','cox2','aids','imdb_binary','firstmm_db','dblp','qm9'],
+                            dataset=['firstmm_db','dblp','qm9', 'proteins','cox2','aids','imdb_binary','reddit_binary'],
                             n_layers=4,
                             batch_size=32,
                             hidden_dim=64,
@@ -59,7 +59,7 @@ def parse_encoder(parser, arg_str=None):
                             margin=0.1,
                             test_set='',
                             eval_interval=5000,
-                            n_workers=1,
+                            n_workers=4,
                             model_path="ckpt/model.pt",
                             load_model=True,
                             tag='',

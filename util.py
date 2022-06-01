@@ -4,8 +4,9 @@ from deepsnap.graph import Graph as DSGraph
 from deepsnap.batch import Batch
 import networkx as nx
 import numpy as np
+import matplotlib
 import matplotlib.pyplot as plt
-
+matplotlib.use('Agg')
 
 def load_gcn_model(ckpt, model):
     ckpt = torch.load(ckpt)

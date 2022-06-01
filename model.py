@@ -29,6 +29,7 @@ class NTN(torch.nn.Module):
     def forward(self, batch_q_em, batch_da_em):  # batch_q_em bx5xc   batch_da_em bx18xc   torch.tensor
         q_size = len(batch_q_em)
         da_size = len(batch_da_em)
+        # print("em shape", q_size, da_size, batch_q_em.shape, batch_da_em.shape)
         batch_q_em_adddim = torch.unsqueeze(batch_q_em, -3)  # batch_q_em_adddim bx1x5xc   torch.tensor
         batch_da_em_adddim = torch.unsqueeze(batch_da_em, -3)  # batch_da_em _adddim bx1x18xc   torch.tensor
         T_batch_da_em_adddim = torch.transpose(batch_da_em_adddim, -2, -1)  # T_batch_da_em _adddim bx1xcx18   torch.tensor
@@ -57,7 +58,7 @@ class NTN(torch.nn.Module):
         # print("NTN before sigmoid", end.shape)
         # print("bias", self.b)
         # end = first + self.b  # 由于mid重复的太多，所以这里不用mid了
-        return torch.sigmoid(end)  # end bxkx5x18
+        return torch.nn.functional.relu(end)#, dim=-1)  # end bxkxsmallxbig
 
 
 class Critic(nn.Module):
@@ -70,18 +71,19 @@ class Critic(nn.Module):
         self.margin = args.margin
         self.use_intersection = False
         self.fc1 = nn.Linear(64*64, 64)
-        self.ReLU = nn.ReLU()
+        self.Sigmoid = nn.Sigmoid()
         self.fc2 = nn.Linear(64, 1)
 
-    def forward(self, emb_as, emb_bs, similar):  # next_state
-        # 在这里a是大图，b是小图
-        emb_as_T = torch.transpose(emb_as, 1, 0)
-        x = torch.matmul(emb_as_T, similar)
-        x = torch.matmul(x, emb_bs)
+    def forward(self, emb_small, emb_big, similar):  # next_state
+        emb_small_T = torch.transpose(emb_small, 1, 0)
+
+        x = torch.matmul(emb_small_T, similar)
+        x = torch.matmul(x, emb_big)
         x = x.view(-1, 64*64)
-        x = self.ReLU(self.fc1(x))
+        x = self.Sigmoid(self.fc1(x))
         x = self.fc2(x)
 
+        # 在这里a是大图，b是小图
         # raw_pred = torch.max(torch.zeros_like(emb_as,
         #                                       device=emb_as.device), emb_bs - emb_as) ** 2
         # # b是a的子图，则raw_pred趋近0， reward趋近1
@@ -108,7 +110,7 @@ class Critic(nn.Module):
             device=emb_as.device), emb_bs - emb_as)**2, dim=1)
         return e
 
-    def criterion(self, emb_as, emb_bs, labels):
+    def criterion(self, emb_small, emb_big, labels):
         """Loss function for order emb.
         The e term is the amount of violation (if b is a subgraph of a).
         For positive examples, the e term is minimized (close to 0);
@@ -117,15 +119,15 @@ class Critic(nn.Module):
         pred: lists of embeddings outputted by forward
         intersect_embs: not used
         labels: subgraph labels for each entry in pred
-        a是大图,b是小图
         """
-        e = torch.sum(torch.max(torch.zeros_like(emb_as,
-            device=emb_as.device), emb_bs - emb_as)**2, dim=1)
+        e = torch.sum(torch.max(torch.zeros_like(emb_small,
+            device=emb_small.device), emb_small - emb_big)**2, dim=1)
 
         margin = self.margin
         e[labels == 0] = torch.max(torch.tensor(0.0,
-            device=emb_as.device), margin - e)[labels == 0]
+            device=emb_small.device), margin - e)[labels == 0]
 
         relation_loss = torch.sum(e)
 
         return relation_loss
+

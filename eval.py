@@ -1,7 +1,7 @@
 import json
 
-pred_json = 'res/2022-05-22-16.json'
-gt_json = 'data/gt_datanode1000_querynode20_query1000_maxlabel10.json'
+pred_json = 'res/2022-05-27-19.json'
+gt_json = "data/gt_datanode1200_querynode29_query1000_maxlabel10.json"
 
 fp = open(gt_json, 'r')
 f_gt = json.load(fp)

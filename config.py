@@ -19,7 +19,7 @@ args['sample_frequency'] = 256 # type=int)
 args['activation'] = 'Relu' # type=str)
 args['render'] = False # type=bool)  #  show UI or not
 args['log_interval'] = 50 # type=int)  #
-args['load'] = '2022-05-22-16'#"2022-05-01-20" # type=bool)  #  load model
+args['load'] = "2022-05-30-17" # type=bool)  #  load model
 
 args['render_interval'] = 100 # type=int)  #  after render_interval  the env.render() will work
 args['policy_noise'] = 0.1 # type=float)

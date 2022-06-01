@@ -1,0 +1,3052 @@
+nohup: 忽略输入
+using device:  cuda:1
+warning!!!! 当前数据集不考虑边权
+warning!!!! 当前数据集不考虑边权
+====================================
+model has been loaded...
+====================================
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+画出了图0 和小图0 的匹配图
+开始reset
+大图被选择的点 1044, 小图被选择的点 19
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 1, 小图被选择的点 19
+大图被选择的点 14, 小图被选择的点 21
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+大图被选择的点 523, 小图被选择的点 16
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 1, 小图被选择的点 0
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+画出了图0 和小图5 的匹配图
+开始reset
+大图被选择的点 1026, 小图被选择的点 9
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 771, 小图被选择的点 1
+大图被选择的点 1040, 小图被选择的点 10
+大图被选择的点 1027, 小图被选择的点 19
+Ep_i 	0, the ep_r is 	-22.00, the step is 	27
+开始reset
+大图被选择的点 1032, 小图被选择的点 17
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 4, 小图被选择的点 16
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+画出了图0 和小图10 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 1027, 小图被选择的点 4
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+画出了图0 和小图15 的匹配图
+开始reset
+大图被选择的点 1024, 小图被选择的点 13
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 16, 小图被选择的点 22
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 129, 小图被选择的点 17
+大图被选择的点 1024, 小图被选择的点 3
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+大图被选择的点 0, 小图被选择的点 12
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+画出了图0 和小图20 的匹配图
+开始reset
+大图被选择的点 514, 小图被选择的点 2
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 513, 小图被选择的点 10
+大图被选择的点 1, 小图被选择的点 5
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+大图被选择的点 512, 小图被选择的点 13
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 1032, 小图被选择的点 18
+大图被选择的点 4, 小图被选择的点 10
+大图被选择的点 0, 小图被选择的点 12
+Ep_i 	0, the ep_r is 	-22.00, the step is 	27
+开始reset
+大图被选择的点 14, 小图被选择的点 17
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+画出了图0 和小图25 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 1024, 小图被选择的点 15
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 199, 小图被选择的点 8
+大图被选择的点 1036, 小图被选择的点 16
+大图被选择的点 1024, 小图被选择的点 2
+Ep_i 	0, the ep_r is 	-22.00, the step is 	27
+开始reset
+大图被选择的点 1027, 小图被选择的点 19
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+画出了图0 和小图30 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 1034, 小图被选择的点 13
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 8, 小图被选择的点 9
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 1024, 小图被选择的点 4
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 264, 小图被选择的点 25
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+画出了图0 和小图35 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 264, 小图被选择的点 19
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 4, 小图被选择的点 13
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+画出了图0 和小图40 的匹配图
+开始reset
+大图被选择的点 0, 小图被选择的点 0
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 1034, 小图被选择的点 14
+大图被选择的点 0, 小图被选择的点 16
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+大图被选择的点 197, 小图被选择的点 8
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 0, 小图被选择的点 4
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 512, 小图被选择的点 6
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+画出了图0 和小图45 的匹配图
+开始reset
+大图被选择的点 1025, 小图被选择的点 14
+大图被选择的点 1024, 小图被选择的点 19
+大图被选择的点 23, 小图被选择的点 28
+大图被选择的点 2, 小图被选择的点 6
+Ep_i 	0, the ep_r is 	-20.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 1, 小图被选择的点 6
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 7, 小图被选择的点 8
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 450, 小图被选择的点 4
+大图被选择的点 8, 小图被选择的点 8
+大图被选择的点 4, 小图被选择的点 17
+Ep_i 	0, the ep_r is 	-22.00, the step is 	27
+画出了图0 和小图50 的匹配图
+开始reset
+大图被选择的点 1, 小图被选择的点 4
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 8, 小图被选择的点 18
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 1027, 小图被选择的点 17
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 772, 小图被选择的点 2
+大图被选择的点 1024, 小图被选择的点 15
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+画出了图0 和小图55 的匹配图
+开始reset
+大图被选择的点 1027, 小图被选择的点 22
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 512, 小图被选择的点 1
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 384, 小图被选择的点 10
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+画出了图0 和小图60 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 197, 小图被选择的点 26
+大图被选择的点 7, 小图被选择的点 6
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+大图被选择的点 769, 小图被选择的点 2
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 7, 小图被选择的点 14
+大图被选择的点 1034, 小图被选择的点 15
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+画出了图0 和小图65 的匹配图
+开始reset
+大图被选择的点 1025, 小图被选择的点 1
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 0, 小图被选择的点 15
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 1, 小图被选择的点 14
+大图被选择的点 1024, 小图被选择的点 17
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 197, 小图被选择的点 11
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+画出了图0 和小图70 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 14, 小图被选择的点 20
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 1040, 小图被选择的点 8
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+画出了图0 和小图75 的匹配图
+开始reset
+大图被选择的点 1154, 小图被选择的点 11
+大图被选择的点 1, 小图被选择的点 10
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+大图被选择的点 1, 小图被选择的点 24
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 1154, 小图被选择的点 16
+大图被选择的点 512, 小图被选择的点 6
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+画出了图0 和小图80 的匹配图
+开始reset
+大图被选择的点 523, 小图被选择的点 18
+大图被选择的点 512, 小图被选择的点 16
+大图被选择的点 1, 小图被选择的点 2
+Ep_i 	0, the ep_r is 	-22.00, the step is 	27
+开始reset
+大图被选择的点 0, 小图被选择的点 8
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 1026, 小图被选择的点 4
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 1026, 小图被选择的点 3
+大图被选择的点 1031, 小图被选择的点 18
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+大图被选择的点 7, 小图被选择的点 14
+大图被选择的点 4, 小图被选择的点 17
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+画出了图0 和小图85 的匹配图
+开始reset
+大图被选择的点 0, 小图被选择的点 15
+大图被选择的点 23, 小图被选择的点 26
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+大图被选择的点 1031, 小图被选择的点 14
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 769, 小图被选择的点 4
+大图被选择的点 514, 小图被选择的点 2
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+画出了图0 和小图90 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 1, 小图被选择的点 8
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 643, 小图被选择的点 25
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 1032, 小图被选择的点 6
+大图被选择的点 1027, 小图被选择的点 21
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+画出了图0 和小图95 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 4, 小图被选择的点 13
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 1027, 小图被选择的点 21
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+画出了图0 和小图100 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 514, 小图被选择的点 9
+大图被选择的点 1034, 小图被选择的点 2
+大图被选择的点 21, 小图被选择的点 22
+Ep_i 	0, the ep_r is 	-22.00, the step is 	27
+开始reset
+大图被选择的点 512, 小图被选择的点 16
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 896, 小图被选择的点 24
+大图被选择的点 1027, 小图被选择的点 15
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+画出了图0 和小图105 的匹配图
+开始reset
+大图被选择的点 5, 小图被选择的点 2
+大图被选择的点 0, 小图被选择的点 14
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+大图被选择的点 1024, 小图被选择的点 1
+大图被选择的点 7, 小图被选择的点 11
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 8, 小图被选择的点 16
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 0, 小图被选择的点 18
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+画出了图0 和小图110 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 1025, 小图被选择的点 1
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 512, 小图被选择的点 4
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 26, 小图被选择的点 28
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+画出了图0 和小图115 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 1025, 小图被选择的点 9
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 1031, 小图被选择的点 26
+大图被选择的点 0, 小图被选择的点 1
+大图被选择的点 1024, 小图被选择的点 10
+Ep_i 	0, the ep_r is 	-22.00, the step is 	27
+开始reset
+大图被选择的点 0, 小图被选择的点 8
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+画出了图0 和小图120 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 450, 小图被选择的点 9
+大图被选择的点 4, 小图被选择的点 16
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+大图被选择的点 523, 小图被选择的点 1
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 2, 小图被选择的点 28
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+画出了图0 和小图125 的匹配图
+开始reset
+大图被选择的点 1, 小图被选择的点 16
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 1, 小图被选择的点 19
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 0, 小图被选择的点 24
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 1034, 小图被选择的点 13
+大图被选择的点 14, 小图被选择的点 24
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+画出了图0 和小图130 的匹配图
+开始reset
+大图被选择的点 8, 小图被选择的点 9
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 64, 小图被选择的点 1
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 1, 小图被选择的点 17
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 1040, 小图被选择的点 6
+大图被选择的点 1027, 小图被选择的点 14
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+画出了图0 和小图135 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 524, 小图被选择的点 4
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 0, 小图被选择的点 16
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+画出了图0 和小图140 的匹配图
+开始reset
+大图被选择的点 8, 小图被选择的点 8
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 771, 小图被选择的点 0
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 1034, 小图被选择的点 8
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 514, 小图被选择的点 3
+大图被选择的点 1034, 小图被选择的点 15
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+画出了图0 和小图145 的匹配图
+开始reset
+大图被选择的点 8, 小图被选择的点 12
+大图被选择的点 0, 小图被选择的点 15
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 1034, 小图被选择的点 3
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 4, 小图被选择的点 11
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+画出了图0 和小图150 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 1, 小图被选择的点 18
+大图被选择的点 512, 小图被选择的点 1
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 1027, 小图被选择的点 16
+大图被选择的点 1024, 小图被选择的点 17
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+画出了图0 和小图155 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 764, 小图被选择的点 14
+大图被选择的点 771, 小图被选择的点 0
+大图被选择的点 1025, 小图被选择的点 12
+大图被选择的点 1024, 小图被选择的点 17
+Ep_i 	0, the ep_r is 	-20.00, the step is 	27
+开始reset
+大图被选择的点 1, 小图被选择的点 9
+大图被选择的点 7, 小图被选择的点 17
+大图被选择的点 1034, 小图被选择的点 18
+Ep_i 	0, the ep_r is 	-22.00, the step is 	27
+画出了图0 和小图160 的匹配图
+开始reset
+大图被选择的点 1154, 小图被选择的点 17
+大图被选择的点 8, 小图被选择的点 5
+大图被选择的点 1034, 小图被选择的点 6
+Ep_i 	0, the ep_r is 	-22.00, the step is 	27
+开始reset
+大图被选择的点 4, 小图被选择的点 10
+大图被选择的点 1034, 小图被选择的点 14
+大图被选择的点 1036, 小图被选择的点 16
+Ep_i 	0, the ep_r is 	-22.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 1024, 小图被选择的点 1
+大图被选择的点 0, 小图被选择的点 12
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+画出了图0 和小图165 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 8, 小图被选择的点 3
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+画出了图0 和小图170 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 4, 小图被选择的点 14
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 518, 小图被选择的点 8
+大图被选择的点 7, 小图被选择的点 11
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 0, 小图被选择的点 2
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+画出了图0 和小图175 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 764, 小图被选择的点 4
+大图被选择的点 1025, 小图被选择的点 14
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+大图被选择的点 1024, 小图被选择的点 7
+大图被选择的点 512, 小图被选择的点 5
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 524, 小图被选择的点 1
+大图被选择的点 1025, 小图被选择的点 0
+大图被选择的点 1024, 小图被选择的点 6
+大图被选择的点 8, 小图被选择的点 8
+大图被选择的点 7, 小图被选择的点 10
+Ep_i 	0, the ep_r is 	-18.00, the step is 	27
+画出了图0 和小图180 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 0, 小图被选择的点 21
+大图被选择的点 8, 小图被选择的点 9
+大图被选择的点 2, 小图被选择的点 25
+Ep_i 	0, the ep_r is 	-22.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 1, 小图被选择的点 1
+大图被选择的点 1024, 小图被选择的点 4
+大图被选择的点 0, 小图被选择的点 13
+大图被选择的点 1044, 小图被选择的点 21
+Ep_i 	0, the ep_r is 	-20.00, the step is 	27
+画出了图0 和小图185 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 8, 小图被选择的点 4
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 1040, 小图被选择的点 1
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 264, 小图被选择的点 16
+大图被选择的点 517, 小图被选择的点 5
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+画出了图0 和小图190 的匹配图
+开始reset
+大图被选择的点 517, 小图被选择的点 14
+大图被选择的点 1032, 小图被选择的点 12
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 260, 小图被选择的点 2
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 512, 小图被选择的点 3
+大图被选择的点 7, 小图被选择的点 13
+大图被选择的点 1040, 小图被选择的点 26
+Ep_i 	0, the ep_r is 	-22.00, the step is 	27
+画出了图0 和小图195 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 512, 小图被选择的点 15
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 0, 小图被选择的点 16
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+画出了图0 和小图200 的匹配图
+开始reset
+大图被选择的点 514, 小图被选择的点 5
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 0, 小图被选择的点 25
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 14, 小图被选择的点 25
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+画出了图0 和小图205 的匹配图
+开始reset
+大图被选择的点 774, 小图被选择的点 0
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 0, 小图被选择的点 24
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+画出了图0 和小图210 的匹配图
+开始reset
+大图被选择的点 1024, 小图被选择的点 11
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 7, 小图被选择的点 6
+大图被选择的点 1036, 小图被选择的点 11
+大图被选择的点 4, 小图被选择的点 19
+Ep_i 	0, the ep_r is 	-22.00, the step is 	27
+开始reset
+大图被选择的点 26, 小图被选择的点 27
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+画出了图0 和小图215 的匹配图
+开始reset
+大图被选择的点 450, 小图被选择的点 16
+大图被选择的点 7, 小图被选择的点 2
+大图被选择的点 8, 小图被选择的点 4
+Ep_i 	0, the ep_r is 	-22.00, the step is 	27
+开始reset
+大图被选择的点 764, 小图被选择的点 12
+大图被选择的点 1040, 小图被选择的点 7
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 8, 小图被选择的点 0
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+画出了图0 和小图220 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 1033, 小图被选择的点 2
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 8, 小图被选择的点 10
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 8, 小图被选择的点 3
+大图被选择的点 1024, 小图被选择的点 13
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+画出了图0 和小图225 的匹配图
+开始reset
+大图被选择的点 1040, 小图被选择的点 7
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 26, 小图被选择的点 26
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 14, 小图被选择的点 20
+大图被选择的点 2, 小图被选择的点 22
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+大图被选择的点 518, 小图被选择的点 6
+大图被选择的点 1036, 小图被选择的点 13
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+画出了图0 和小图230 的匹配图
+开始reset
+大图被选择的点 764, 小图被选择的点 25
+大图被选择的点 772, 小图被选择的点 27
+大图被选择的点 1025, 小图被选择的点 7
+大图被选择的点 1, 小图被选择的点 8
+大图被选择的点 1027, 小图被选择的点 10
+Ep_i 	0, the ep_r is 	-18.00, the step is 	27
+开始reset
+大图被选择的点 0, 小图被选择的点 11
+大图被选择的点 1036, 小图被选择的点 14
+大图被选择的点 1, 小图被选择的点 21
+大图被选择的点 2, 小图被选择的点 27
+Ep_i 	0, the ep_r is 	-20.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+画出了图0 和小图235 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 1027, 小图被选择的点 2
+大图被选择的点 14, 小图被选择的点 16
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 1034, 小图被选择的点 17
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+画出了图0 和小图240 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 0, 小图被选择的点 2
+大图被选择的点 8, 小图被选择的点 12
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+大图被选择的点 8, 小图被选择的点 6
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 1032, 小图被选择的点 3
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+画出了图0 和小图245 的匹配图
+开始reset
+大图被选择的点 1026, 小图被选择的点 0
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 1027, 小图被选择的点 25
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 512, 小图被选择的点 1
+大图被选择的点 0, 小图被选择的点 13
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+大图被选择的点 7, 小图被选择的点 6
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+画出了图0 和小图250 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 1024, 小图被选择的点 6
+大图被选择的点 1026, 小图被选择的点 3
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 450, 小图被选择的点 0
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+画出了图0 和小图255 的匹配图
+开始reset
+大图被选择的点 1025, 小图被选择的点 12
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 129, 小图被选择的点 1
+大图被选择的点 512, 小图被选择的点 25
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+大图被选择的点 771, 小图被选择的点 2
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+画出了图0 和小图260 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 2, 小图被选择的点 22
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 4, 小图被选择的点 12
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+画出了图0 和小图265 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 524, 小图被选择的点 13
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+画出了图0 和小图270 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 764, 小图被选择的点 10
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 1025, 小图被选择的点 1
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+画出了图0 和小图275 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 1025, 小图被选择的点 0
+大图被选择的点 0, 小图被选择的点 12
+大图被选择的点 1036, 小图被选择的点 20
+Ep_i 	0, the ep_r is 	-22.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 129, 小图被选择的点 19
+大图被选择的点 1034, 小图被选择的点 10
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+画出了图0 和小图280 的匹配图
+开始reset
+大图被选择的点 1036, 小图被选择的点 19
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 1040, 小图被选择的点 9
+大图被选择的点 1024, 小图被选择的点 17
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+大图被选择的点 512, 小图被选择的点 1
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 4, 小图被选择的点 19
+大图被选择的点 14, 小图被选择的点 24
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+画出了图0 和小图285 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 7, 小图被选择的点 2
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 129, 小图被选择的点 9
+大图被选择的点 7, 小图被选择的点 14
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 1, 小图被选择的点 27
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+画出了图0 和小图290 的匹配图
+开始reset
+大图被选择的点 771, 小图被选择的点 3
+大图被选择的点 7, 小图被选择的点 10
+大图被选择的点 8, 小图被选择的点 13
+Ep_i 	0, the ep_r is 	-22.00, the step is 	27
+开始reset
+大图被选择的点 129, 小图被选择的点 8
+大图被选择的点 4, 小图被选择的点 15
+大图被选择的点 2, 小图被选择的点 27
+Ep_i 	0, the ep_r is 	-22.00, the step is 	27
+开始reset
+大图被选择的点 197, 小图被选择的点 24
+大图被选择的点 1025, 小图被选择的点 1
+大图被选择的点 7, 小图被选择的点 11
+Ep_i 	0, the ep_r is 	-22.00, the step is 	27
+开始reset
+大图被选择的点 524, 小图被选择的点 4
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 896, 小图被选择的点 1
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+画出了图0 和小图295 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+画出了图0 和小图300 的匹配图
+开始reset
+大图被选择的点 1034, 小图被选择的点 1
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 25, 小图被选择的点 19
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 523, 小图被选择的点 24
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 0, 小图被选择的点 8
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+画出了图0 和小图305 的匹配图
+开始reset
+大图被选择的点 7, 小图被选择的点 6
+大图被选择的点 1025, 小图被选择的点 9
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+大图被选择的点 129, 小图被选择的点 16
+大图被选择的点 524, 小图被选择的点 2
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+大图被选择的点 1025, 小图被选择的点 17
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+画出了图0 和小图310 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 523, 小图被选择的点 16
+大图被选择的点 1036, 小图被选择的点 2
+大图被选择的点 0, 小图被选择的点 6
+Ep_i 	0, the ep_r is 	-22.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 8, 小图被选择的点 1
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+画出了图0 和小图315 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 8, 小图被选择的点 9
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 512, 小图被选择的点 9
+大图被选择的点 1034, 小图被选择的点 14
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+画出了图0 和小图320 的匹配图
+开始reset
+大图被选择的点 4, 小图被选择的点 24
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 764, 小图被选择的点 10
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 8, 小图被选择的点 7
+大图被选择的点 1024, 小图被选择的点 13
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+大图被选择的点 1034, 小图被选择的点 11
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+画出了图0 和小图325 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 514, 小图被选择的点 18
+大图被选择的点 1031, 小图被选择的点 10
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+大图被选择的点 1025, 小图被选择的点 3
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 514, 小图被选择的点 9
+大图被选择的点 17, 小图被选择的点 12
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+大图被选择的点 1034, 小图被选择的点 0
+大图被选择的点 1036, 小图被选择的点 14
+大图被选择的点 2, 小图被选择的点 19
+Ep_i 	0, the ep_r is 	-22.00, the step is 	27
+画出了图0 和小图330 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 512, 小图被选择的点 2
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+画出了图0 和小图335 的匹配图
+开始reset
+大图被选择的点 0, 小图被选择的点 25
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 1154, 小图被选择的点 8
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 8, 小图被选择的点 6
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+画出了图0 和小图340 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 1026, 小图被选择的点 3
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 1154, 小图被选择的点 17
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 8, 小图被选择的点 4
+大图被选择的点 1024, 小图被选择的点 9
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+画出了图0 和小图345 的匹配图
+开始reset
+大图被选择的点 1031, 小图被选择的点 4
+大图被选择的点 1, 小图被选择的点 19
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 448, 小图被选择的点 1
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+画出了图0 和小图350 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 512, 小图被选择的点 3
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 1024, 小图被选择的点 1
+大图被选择的点 0, 小图被选择的点 16
+大图被选择的点 26, 小图被选择的点 28
+Ep_i 	0, the ep_r is 	-22.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+画出了图0 和小图355 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 772, 小图被选择的点 2
+大图被选择的点 1032, 小图被选择的点 5
+大图被选择的点 1024, 小图被选择的点 15
+Ep_i 	0, the ep_r is 	-22.00, the step is 	27
+开始reset
+大图被选择的点 264, 小图被选择的点 19
+大图被选择的点 1024, 小图被选择的点 12
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+大图被选择的点 1, 小图被选择的点 5
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 0, 小图被选择的点 12
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+画出了图0 和小图360 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 0, 小图被选择的点 11
+大图被选择的点 26, 小图被选择的点 20
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+画出了图0 和小图365 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 512, 小图被选择的点 0
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 1, 小图被选择的点 0
+大图被选择的点 7, 小图被选择的点 13
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+画出了图0 和小图370 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 448, 小图被选择的点 9
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+画出了图0 和小图375 的匹配图
+开始reset
+大图被选择的点 512, 小图被选择的点 0
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 896, 小图被选择的点 17
+大图被选择的点 8, 小图被选择的点 3
+大图被选择的点 1036, 小图被选择的点 2
+Ep_i 	0, the ep_r is 	-22.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 523, 小图被选择的点 9
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+画出了图0 和小图380 的匹配图
+开始reset
+大图被选择的点 129, 小图被选择的点 26
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+画出了图0 和小图385 的匹配图
+开始reset
+大图被选择的点 1025, 小图被选择的点 17
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 1154, 小图被选择的点 8
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 16, 小图被选择的点 25
+大图被选择的点 4, 小图被选择的点 26
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+大图被选择的点 7, 小图被选择的点 15
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+画出了图0 和小图390 的匹配图
+开始reset
+大图被选择的点 199, 小图被选择的点 17
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 1034, 小图被选择的点 22
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 512, 小图被选择的点 2
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 1034, 小图被选择的点 15
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+画出了图0 和小图395 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 512, 小图被选择的点 17
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 769, 小图被选择的点 9
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 1, 小图被选择的点 10
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+画出了图0 和小图400 的匹配图
+开始reset
+大图被选择的点 1027, 小图被选择的点 14
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 1025, 小图被选择的点 4
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 771, 小图被选择的点 16
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+画出了图0 和小图405 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 199, 小图被选择的点 0
+大图被选择的点 8, 小图被选择的点 13
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+画出了图0 和小图410 的匹配图
+开始reset
+大图被选择的点 14, 小图被选择的点 26
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 0, 小图被选择的点 16
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 1027, 小图被选择的点 27
+大图被选择的点 512, 小图被选择的点 6
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+画出了图0 和小图415 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 518, 小图被选择的点 8
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 8, 小图被选择的点 0
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+画出了图0 和小图420 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 1032, 小图被选择的点 19
+大图被选择的点 7, 小图被选择的点 25
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+大图被选择的点 1034, 小图被选择的点 0
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 14, 小图被选择的点 14
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 199, 小图被选择的点 19
+大图被选择的点 1036, 小图被选择的点 13
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+画出了图0 和小图425 的匹配图
+开始reset
+大图被选择的点 1044, 小图被选择的点 21
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 7, 小图被选择的点 2
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 8, 小图被选择的点 2
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+画出了图0 和小图430 的匹配图
+开始reset
+大图被选择的点 64, 小图被选择的点 9
+大图被选择的点 1025, 小图被选择的点 4
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 1025, 小图被选择的点 6
+大图被选择的点 1, 小图被选择的点 7
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 199, 小图被选择的点 0
+大图被选择的点 1027, 小图被选择的点 16
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+画出了图0 和小图435 的匹配图
+开始reset
+大图被选择的点 129, 小图被选择的点 24
+大图被选择的点 14, 小图被选择的点 20
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 1024, 小图被选择的点 11
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 4, 小图被选择的点 24
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+画出了图0 和小图440 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 1025, 小图被选择的点 2
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 0, 小图被选择的点 25
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 0, 小图被选择的点 9
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+画出了图0 和小图445 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 1026, 小图被选择的点 8
+大图被选择的点 7, 小图被选择的点 15
+大图被选择的点 1031, 小图被选择的点 4
+Ep_i 	0, the ep_r is 	-22.00, the step is 	27
+开始reset
+大图被选择的点 1, 小图被选择的点 9
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 14, 小图被选择的点 20
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+画出了图0 和小图450 的匹配图
+开始reset
+大图被选择的点 1034, 小图被选择的点 2
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 514, 小图被选择的点 0
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 524, 小图被选择的点 2
+大图被选择的点 1034, 小图被选择的点 12
+大图被选择的点 14, 小图被选择的点 24
+Ep_i 	0, the ep_r is 	-22.00, the step is 	27
+开始reset
+大图被选择的点 1, 小图被选择的点 6
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+画出了图0 和小图455 的匹配图
+开始reset
+大图被选择的点 1026, 小图被选择的点 4
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 4, 小图被选择的点 16
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 7, 小图被选择的点 2
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 1040, 小图被选择的点 6
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+画出了图0 和小图460 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 64, 小图被选择的点 11
+大图被选择的点 1, 小图被选择的点 4
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+大图被选择的点 1, 小图被选择的点 18
+大图被选择的点 4, 小图被选择的点 15
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+大图被选择的点 1154, 小图被选择的点 18
+大图被选择的点 1024, 小图被选择的点 10
+大图被选择的点 0, 小图被选择的点 7
+Ep_i 	0, the ep_r is 	-22.00, the step is 	27
+开始reset
+大图被选择的点 7, 小图被选择的点 10
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+画出了图0 和小图465 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 0, 小图被选择的点 24
+大图被选择的点 512, 小图被选择的点 4
+大图被选择的点 4, 小图被选择的点 17
+Ep_i 	0, the ep_r is 	-22.00, the step is 	27
+开始reset
+大图被选择的点 25, 小图被选择的点 20
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 1036, 小图被选择的点 2
+大图被选择的点 512, 小图被选择的点 11
+大图被选择的点 7, 小图被选择的点 6
+Ep_i 	0, the ep_r is 	-22.00, the step is 	27
+画出了图0 和小图470 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 1, 小图被选择的点 10
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 1031, 小图被选择的点 12
+大图被选择的点 8, 小图被选择的点 14
+大图被选择的点 2, 小图被选择的点 22
+Ep_i 	0, the ep_r is 	-22.00, the step is 	27
+开始reset
+大图被选择的点 771, 小图被选择的点 1
+大图被选择的点 7, 小图被选择的点 9
+大图被选择的点 1, 小图被选择的点 19
+Ep_i 	0, the ep_r is 	-22.00, the step is 	27
+画出了图0 和小图475 的匹配图
+开始reset
+大图被选择的点 199, 小图被选择的点 16
+大图被选择的点 1024, 小图被选择的点 18
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+大图被选择的点 1, 小图被选择的点 26
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 450, 小图被选择的点 8
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+画出了图0 和小图480 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 1027, 小图被选择的点 11
+大图被选择的点 1024, 小图被选择的点 12
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+大图被选择的点 1027, 小图被选择的点 1
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 512, 小图被选择的点 1
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 1, 小图被选择的点 1
+大图被选择的点 1034, 小图被选择的点 12
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+画出了图0 和小图485 的匹配图
+开始reset
+大图被选择的点 512, 小图被选择的点 25
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 64, 小图被选择的点 9
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 450, 小图被选择的点 9
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 1, 小图被选择的点 12
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 512, 小图被选择的点 0
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+画出了图0 和小图490 的匹配图
+开始reset
+大图被选择的点 8, 小图被选择的点 11
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 1032, 小图被选择的点 16
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+画出了图0 和小图495 的匹配图
+开始reset
+大图被选择的点 197, 小图被选择的点 16
+大图被选择的点 1025, 小图被选择的点 3
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 7, 小图被选择的点 12
+大图被选择的点 1044, 小图被选择的点 20
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+画出了图0 和小图500 的匹配图
+开始reset
+大图被选择的点 1031, 小图被选择的点 13
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 1025, 小图被选择的点 8
+大图被选择的点 1, 小图被选择的点 9
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+大图被选择的点 1025, 小图被选择的点 4
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 0, 小图被选择的点 19
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+画出了图0 和小图505 的匹配图
+开始reset
+大图被选择的点 2, 小图被选择的点 24
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 764, 小图被选择的点 11
+大图被选择的点 1, 小图被选择的点 17
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+大图被选择的点 8, 小图被选择的点 8
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 1034, 小图被选择的点 14
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 4, 小图被选择的点 16
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+画出了图0 和小图510 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 64, 小图被选择的点 17
+大图被选择的点 1024, 小图被选择的点 14
+大图被选择的点 0, 小图被选择的点 3
+Ep_i 	0, the ep_r is 	-22.00, the step is 	27
+开始reset
+大图被选择的点 8, 小图被选择的点 13
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 1025, 小图被选择的点 6
+大图被选择的点 1, 小图被选择的点 4
+大图被选择的点 2, 小图被选择的点 22
+Ep_i 	0, the ep_r is 	-22.00, the step is 	27
+画出了图0 和小图515 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 523, 小图被选择的点 17
+大图被选择的点 7, 小图被选择的点 12
+大图被选择的点 1024, 小图被选择的点 3
+大图被选择的点 4, 小图被选择的点 0
+Ep_i 	0, the ep_r is 	-20.00, the step is 	27
+开始reset
+大图被选择的点 1024, 小图被选择的点 26
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+画出了图0 和小图520 的匹配图
+开始reset
+大图被选择的点 524, 小图被选择的点 2
+大图被选择的点 1025, 小图被选择的点 3
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 26, 小图被选择的点 23
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+画出了图0 和小图525 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 1025, 小图被选择的点 19
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 1025, 小图被选择的点 9
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+画出了图0 和小图530 的匹配图
+开始reset
+大图被选择的点 4, 小图被选择的点 13
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 1034, 小图被选择的点 2
+大图被选择的点 1027, 小图被选择的点 11
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 8, 小图被选择的点 11
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+画出了图0 和小图535 的匹配图
+开始reset
+大图被选择的点 764, 小图被选择的点 4
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 14, 小图被选择的点 25
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 1034, 小图被选择的点 18
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+画出了图0 和小图540 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 1024, 小图被选择的点 2
+大图被选择的点 512, 小图被选择的点 0
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 1027, 小图被选择的点 11
+大图被选择的点 14, 小图被选择的点 24
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+画出了图0 和小图545 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 197, 小图被选择的点 21
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 523, 小图被选择的点 18
+大图被选择的点 7, 小图被选择的点 5
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+大图被选择的点 1025, 小图被选择的点 3
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+画出了图0 和小图550 的匹配图
+开始reset
+大图被选择的点 1032, 小图被选择的点 14
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 199, 小图被选择的点 11
+大图被选择的点 0, 小图被选择的点 28
+大图被选择的点 8, 小图被选择的点 20
+Ep_i 	0, the ep_r is 	-22.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 1031, 小图被选择的点 14
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+画出了图0 和小图555 的匹配图
+开始reset
+大图被选择的点 771, 小图被选择的点 19
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 7, 小图被选择的点 8
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+画出了图0 和小图560 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 1154, 小图被选择的点 0
+大图被选择的点 4, 小图被选择的点 17
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+画出了图0 和小图565 的匹配图
+开始reset
+大图被选择的点 0, 小图被选择的点 25
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 512, 小图被选择的点 8
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+画出了图0 和小图570 的匹配图
+开始reset
+大图被选择的点 513, 小图被选择的点 10
+大图被选择的点 1025, 小图被选择的点 0
+大图被选择的点 4, 小图被选择的点 18
+Ep_i 	0, the ep_r is 	-22.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 8, 小图被选择的点 3
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+画出了图0 和小图575 的匹配图
+开始reset
+大图被选择的点 1030, 小图被选择的点 2
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 771, 小图被选择的点 12
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 1034, 小图被选择的点 17
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+画出了图0 和小图580 的匹配图
+开始reset
+大图被选择的点 512, 小图被选择的点 3
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 1032, 小图被选择的点 5
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 7, 小图被选择的点 14
+大图被选择的点 2, 小图被选择的点 22
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+大图被选择的点 1025, 小图被选择的点 0
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+画出了图0 和小图585 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 1032, 小图被选择的点 26
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 1025, 小图被选择的点 18
+大图被选择的点 4, 小图被选择的点 2
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+画出了图0 和小图590 的匹配图
+开始reset
+大图被选择的点 0, 小图被选择的点 3
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 514, 小图被选择的点 0
+大图被选择的点 1031, 小图被选择的点 10
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+大图被选择的点 129, 小图被选择的点 10
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+画出了图0 和小图595 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 1040, 小图被选择的点 6
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 774, 小图被选择的点 24
+大图被选择的点 26, 小图被选择的点 28
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+画出了图0 和小图600 的匹配图
+开始reset
+大图被选择的点 384, 小图被选择的点 26
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 264, 小图被选择的点 4
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 1026, 小图被选择的点 0
+大图被选择的点 1036, 小图被选择的点 18
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+画出了图0 和小图605 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 199, 小图被选择的点 0
+大图被选择的点 1032, 小图被选择的点 10
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+大图被选择的点 1027, 小图被选择的点 3
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+画出了图0 和小图610 的匹配图
+开始reset
+大图被选择的点 0, 小图被选择的点 8
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 0, 小图被选择的点 14
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 1, 小图被选择的点 11
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 1026, 小图被选择的点 12
+大图被选择的点 1027, 小图被选择的点 13
+大图被选择的点 0, 小图被选择的点 2
+Ep_i 	0, the ep_r is 	-22.00, the step is 	27
+画出了图0 和小图615 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 1027, 小图被选择的点 5
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 450, 小图被选择的点 9
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 1034, 小图被选择的点 2
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+画出了图0 和小图620 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 7, 小图被选择的点 15
+大图被选择的点 4, 小图被选择的点 19
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 0, 小图被选择的点 1
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+画出了图0 和小图625 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 1034, 小图被选择的点 8
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 0, 小图被选择的点 16
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 8, 小图被选择的点 8
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+画出了图0 和小图630 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 523, 小图被选择的点 12
+大图被选择的点 1024, 小图被选择的点 24
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+大图被选择的点 450, 小图被选择的点 25
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 7, 小图被选择的点 11
+大图被选择的点 14, 小图被选择的点 25
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+画出了图0 和小图635 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 771, 小图被选择的点 24
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 199, 小图被选择的点 9
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+画出了图0 和小图640 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 21, 小图被选择的点 28
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 0, 小图被选择的点 1
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 0, 小图被选择的点 11
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+画出了图0 和小图645 的匹配图
+开始reset
+大图被选择的点 524, 小图被选择的点 9
+大图被选择的点 1024, 小图被选择的点 3
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 771, 小图被选择的点 6
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+画出了图0 和小图650 的匹配图
+开始reset
+大图被选择的点 8, 小图被选择的点 6
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 8, 小图被选择的点 14
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 1036, 小图被选择的点 26
+大图被选择的点 514, 小图被选择的点 28
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+大图被选择的点 771, 小图被选择的点 25
+大图被选择的点 517, 小图被选择的点 23
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+画出了图0 和小图655 的匹配图
+开始reset
+大图被选择的点 1026, 小图被选择的点 17
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 896, 小图被选择的点 18
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 1032, 小图被选择的点 4
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 8, 小图被选择的点 6
+大图被选择的点 1031, 小图被选择的点 23
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+画出了图0 和小图660 的匹配图
+开始reset
+大图被选择的点 1025, 小图被选择的点 8
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 1027, 小图被选择的点 8
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 643, 小图被选择的点 17
+大图被选择的点 1, 小图被选择的点 21
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+大图被选择的点 512, 小图被选择的点 4
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 199, 小图被选择的点 3
+大图被选择的点 896, 小图被选择的点 2
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+画出了图0 和小图665 的匹配图
+开始reset
+大图被选择的点 264, 小图被选择的点 9
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 8, 小图被选择的点 9
+大图被选择的点 4, 小图被选择的点 14
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+大图被选择的点 0, 小图被选择的点 20
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 1034, 小图被选择的点 12
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+画出了图0 和小图670 的匹配图
+开始reset
+大图被选择的点 64, 小图被选择的点 17
+大图被选择的点 0, 小图被选择的点 12
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+大图被选择的点 0, 小图被选择的点 16
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 8, 小图被选择的点 3
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+画出了图0 和小图675 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 1, 小图被选择的点 6
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 1, 小图被选择的点 5
+大图被选择的点 1034, 小图被选择的点 12
+大图被选择的点 0, 小图被选择的点 14
+Ep_i 	0, the ep_r is 	-22.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+画出了图0 和小图680 的匹配图
+开始reset
+大图被选择的点 523, 小图被选择的点 1
+大图被选择的点 1036, 小图被选择的点 2
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 1024, 小图被选择的点 18
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 514, 小图被选择的点 0
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+画出了图0 和小图685 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 1024, 小图被选择的点 9
+大图被选择的点 512, 小图被选择的点 0
+大图被选择的点 1030, 小图被选择的点 2
+大图被选择的点 0, 小图被选择的点 7
+Ep_i 	0, the ep_r is 	-20.00, the step is 	27
+开始reset
+大图被选择的点 8, 小图被选择的点 4
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 771, 小图被选择的点 27
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+画出了图0 和小图690 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 2, 小图被选择的点 26
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 517, 小图被选择的点 7
+大图被选择的点 1025, 小图被选择的点 10
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+画出了图0 和小图695 的匹配图
+开始reset
+大图被选择的点 4, 小图被选择的点 13
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 523, 小图被选择的点 12
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 450, 小图被选择的点 13
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 1025, 小图被选择的点 5
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+画出了图0 和小图700 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 14, 小图被选择的点 22
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 1044, 小图被选择的点 23
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 1025, 小图被选择的点 0
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+画出了图0 和小图705 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 1040, 小图被选择的点 0
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 1040, 小图被选择的点 7
+大图被选择的点 4, 小图被选择的点 18
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+大图被选择的点 1154, 小图被选择的点 18
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+画出了图0 和小图710 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 524, 小图被选择的点 1
+大图被选择的点 14, 小图被选择的点 24
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+大图被选择的点 0, 小图被选择的点 14
+大图被选择的点 14, 小图被选择的点 26
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 517, 小图被选择的点 1
+大图被选择的点 1024, 小图被选择的点 13
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+画出了图0 和小图715 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+画出了图0 和小图720 的匹配图
+开始reset
+大图被选择的点 764, 小图被选择的点 9
+大图被选择的点 771, 小图被选择的点 10
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+画出了图0 和小图725 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 1024, 小图被选择的点 7
+大图被选择的点 7, 小图被选择的点 11
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+大图被选择的点 774, 小图被选择的点 16
+大图被选择的点 25, 小图被选择的点 24
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 4, 小图被选择的点 13
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+画出了图0 和小图730 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 512, 小图被选择的点 0
+大图被选择的点 14, 小图被选择的点 22
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 774, 小图被选择的点 3
+大图被选择的点 8, 小图被选择的点 12
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+画出了图0 和小图735 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 7, 小图被选择的点 13
+大图被选择的点 1034, 小图被选择的点 14
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 25, 小图被选择的点 22
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+画出了图0 和小图740 的匹配图
+开始reset
+大图被选择的点 64, 小图被选择的点 8
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 2, 小图被选择的点 26
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 1026, 小图被选择的点 4
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+画出了图0 和小图745 的匹配图
+开始reset
+大图被选择的点 1024, 小图被选择的点 2
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 774, 小图被选择的点 7
+大图被选择的点 514, 小图被选择的点 5
+大图被选择的点 512, 小图被选择的点 4
+Ep_i 	0, the ep_r is 	-22.00, the step is 	27
+开始reset
+大图被选择的点 0, 小图被选择的点 12
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 1, 小图被选择的点 17
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+画出了图0 和小图750 的匹配图
+开始reset
+大图被选择的点 518, 小图被选择的点 5
+大图被选择的点 7, 小图被选择的点 2
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+大图被选择的点 14, 小图被选择的点 21
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 0, 小图被选择的点 15
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 512, 小图被选择的点 0
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 448, 小图被选择的点 24
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+画出了图0 和小图755 的匹配图
+开始reset
+大图被选择的点 4, 小图被选择的点 17
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 514, 小图被选择的点 14
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 64, 小图被选择的点 2
+大图被选择的点 4, 小图被选择的点 14
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+画出了图0 和小图760 的匹配图
+开始reset
+大图被选择的点 8, 小图被选择的点 14
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 7, 小图被选择的点 17
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 4, 小图被选择的点 22
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+画出了图0 和小图765 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 1, 小图被选择的点 3
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+画出了图0 和小图770 的匹配图
+开始reset
+大图被选择的点 2, 小图被选择的点 28
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 512, 小图被选择的点 25
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 1025, 小图被选择的点 6
+大图被选择的点 1, 小图被选择的点 7
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+大图被选择的点 512, 小图被选择的点 5
+大图被选择的点 1032, 小图被选择的点 9
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+画出了图0 和小图775 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 1034, 小图被选择的点 15
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 1, 小图被选择的点 8
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 450, 小图被选择的点 8
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+画出了图0 和小图780 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 197, 小图被选择的点 5
+大图被选择的点 769, 小图被选择的点 4
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+大图被选择的点 8, 小图被选择的点 19
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+画出了图0 和小图785 的匹配图
+开始reset
+大图被选择的点 25, 小图被选择的点 25
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+画出了图0 和小图790 的匹配图
+开始reset
+大图被选择的点 0, 小图被选择的点 11
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 0, 小图被选择的点 1
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 0, 小图被选择的点 15
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 129, 小图被选择的点 16
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 774, 小图被选择的点 0
+大图被选择的点 2, 小图被选择的点 22
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+画出了图0 和小图795 的匹配图
+开始reset
+大图被选择的点 771, 小图被选择的点 12
+大图被选择的点 7, 小图被选择的点 6
+大图被选择的点 16, 小图被选择的点 25
+Ep_i 	0, the ep_r is 	-22.00, the step is 	27
+开始reset
+大图被选择的点 1040, 小图被选择的点 8
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 4, 小图被选择的点 11
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+画出了图0 和小图800 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 8, 小图被选择的点 5
+大图被选择的点 1031, 小图被选择的点 26
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+大图被选择的点 514, 小图被选择的点 2
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 512, 小图被选择的点 18
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 764, 小图被选择的点 8
+大图被选择的点 1, 小图被选择的点 15
+大图被选择的点 1024, 小图被选择的点 18
+Ep_i 	0, the ep_r is 	-22.00, the step is 	27
+画出了图0 和小图805 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+画出了图0 和小图810 的匹配图
+开始reset
+大图被选择的点 197, 小图被选择的点 16
+大图被选择的点 514, 小图被选择的点 2
+大图被选择的点 1034, 小图被选择的点 13
+Ep_i 	0, the ep_r is 	-22.00, the step is 	27
+开始reset
+大图被选择的点 7, 小图被选择的点 4
+大图被选择的点 1024, 小图被选择的点 14
+大图被选择的点 26, 小图被选择的点 26
+Ep_i 	0, the ep_r is 	-22.00, the step is 	27
+开始reset
+大图被选择的点 1154, 小图被选择的点 1
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 8, 小图被选择的点 16
+大图被选择的点 0, 小图被选择的点 19
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+画出了图0 和小图815 的匹配图
+开始reset
+大图被选择的点 0, 小图被选择的点 10
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 129, 小图被选择的点 20
+大图被选择的点 1034, 小图被选择的点 0
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+大图被选择的点 512, 小图被选择的点 8
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+画出了图0 和小图820 的匹配图
+开始reset
+大图被选择的点 0, 小图被选择的点 12
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 512, 小图被选择的点 3
+大图被选择的点 1025, 小图被选择的点 1
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+大图被选择的点 7, 小图被选择的点 10
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 2, 小图被选择的点 27
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 524, 小图被选择的点 0
+大图被选择的点 1024, 小图被选择的点 9
+大图被选择的点 0, 小图被选择的点 15
+Ep_i 	0, the ep_r is 	-22.00, the step is 	27
+画出了图0 和小图825 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 8, 小图被选择的点 14
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 16, 小图被选择的点 20
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+画出了图0 和小图830 的匹配图
+开始reset
+大图被选择的点 512, 小图被选择的点 9
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 0, 小图被选择的点 11
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 25, 小图被选择的点 23
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+画出了图0 和小图835 的匹配图
+开始reset
+大图被选择的点 7, 小图被选择的点 27
+大图被选择的点 1026, 小图被选择的点 10
+大图被选择的点 1027, 小图被选择的点 11
+Ep_i 	0, the ep_r is 	-22.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 7, 小图被选择的点 9
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 1027, 小图被选择的点 4
+大图被选择的点 1031, 小图被选择的点 16
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+画出了图0 和小图840 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 1025, 小图被选择的点 1
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+画出了图0 和小图845 的匹配图
+开始reset
+大图被选择的点 450, 小图被选择的点 17
+大图被选择的点 643, 小图被选择的点 8
+大图被选择的点 4, 小图被选择的点 15
+Ep_i 	0, the ep_r is 	-22.00, the step is 	27
+开始reset
+大图被选择的点 450, 小图被选择的点 3
+大图被选择的点 1025, 小图被选择的点 10
+大图被选择的点 1, 小图被选择的点 11
+Ep_i 	0, the ep_r is 	-22.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 514, 小图被选择的点 7
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+画出了图0 和小图850 的匹配图
+开始reset
+大图被选择的点 7, 小图被选择的点 12
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 8, 小图被选择的点 10
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+画出了图0 和小图855 的匹配图
+开始reset
+大图被选择的点 1032, 小图被选择的点 0
+大图被选择的点 1, 小图被选择的点 14
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 0, 小图被选择的点 16
+大图被选择的点 26, 小图被选择的点 28
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+画出了图0 和小图860 的匹配图
+开始reset
+大图被选择的点 1025, 小图被选择的点 4
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 264, 小图被选择的点 24
+大图被选择的点 1025, 小图被选择的点 12
+大图被选择的点 0, 小图被选择的点 20
+Ep_i 	0, the ep_r is 	-22.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 1025, 小图被选择的点 24
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+画出了图0 和小图865 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 1154, 小图被选择的点 24
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+画出了图0 和小图870 的匹配图
+开始reset
+大图被选择的点 774, 小图被选择的点 3
+大图被选择的点 512, 小图被选择的点 1
+大图被选择的点 8, 小图被选择的点 14
+Ep_i 	0, the ep_r is 	-22.00, the step is 	27
+开始reset
+大图被选择的点 523, 小图被选择的点 8
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 199, 小图被选择的点 26
+大图被选择的点 896, 小图被选择的点 25
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+大图被选择的点 0, 小图被选择的点 11
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+画出了图0 和小图875 的匹配图
+开始reset
+大图被选择的点 1031, 小图被选择的点 2
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 1025, 小图被选择的点 14
+大图被选择的点 7, 小图被选择的点 24
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+大图被选择的点 764, 小图被选择的点 11
+大图被选择的点 771, 小图被选择的点 10
+大图被选择的点 517, 小图被选择的点 8
+Ep_i 	0, the ep_r is 	-22.00, the step is 	27
+开始reset
+大图被选择的点 1036, 小图被选择的点 11
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 0, 小图被选择的点 7
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+画出了图0 和小图880 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 0, 小图被选择的点 16
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 4, 小图被选择的点 26
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 8, 小图被选择的点 4
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 771, 小图被选择的点 12
+大图被选择的点 1036, 小图被选择的点 14
+大图被选择的点 1024, 小图被选择的点 18
+Ep_i 	0, the ep_r is 	-22.00, the step is 	27
+画出了图0 和小图885 的匹配图
+开始reset
+大图被选择的点 514, 小图被选择的点 1
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 448, 小图被选择的点 0
+大图被选择的点 7, 小图被选择的点 24
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+画出了图0 和小图890 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 4, 小图被选择的点 14
+大图被选择的点 2, 小图被选择的点 26
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+大图被选择的点 1025, 小图被选择的点 11
+大图被选择的点 8, 小图被选择的点 1
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 7, 小图被选择的点 13
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+画出了图0 和小图895 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 4, 小图被选择的点 20
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 514, 小图被选择的点 3
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 514, 小图被选择的点 2
+大图被选择的点 1027, 小图被选择的点 10
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+画出了图0 和小图900 的匹配图
+开始reset
+大图被选择的点 4, 小图被选择的点 15
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 7, 小图被选择的点 1
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 1024, 小图被选择的点 10
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 129, 小图被选择的点 8
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+画出了图0 和小图905 的匹配图
+开始reset
+大图被选择的点 129, 小图被选择的点 25
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 0, 小图被选择的点 20
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 1036, 小图被选择的点 17
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+画出了图0 和小图910 的匹配图
+开始reset
+大图被选择的点 1026, 小图被选择的点 1
+大图被选择的点 2, 小图被选择的点 26
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+大图被选择的点 1044, 小图被选择的点 0
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+画出了图0 和小图915 的匹配图
+开始reset
+大图被选择的点 514, 小图被选择的点 8
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 1025, 小图被选择的点 8
+大图被选择的点 1027, 小图被选择的点 11
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+大图被选择的点 7, 小图被选择的点 4
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+画出了图0 和小图920 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 512, 小图被选择的点 11
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 1040, 小图被选择的点 7
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 1154, 小图被选择的点 16
+大图被选择的点 7, 小图被选择的点 7
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+大图被选择的点 512, 小图被选择的点 4
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+画出了图0 和小图925 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 514, 小图被选择的点 27
+大图被选择的点 512, 小图被选择的点 28
+大图被选择的点 7, 小图被选择的点 0
+大图被选择的点 0, 小图被选择的点 1
+Ep_i 	0, the ep_r is 	-20.00, the step is 	27
+开始reset
+大图被选择的点 0, 小图被选择的点 8
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+画出了图0 和小图930 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 8, 小图被选择的点 2
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+画出了图0 和小图935 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 1024, 小图被选择的点 5
+大图被选择的点 4, 小图被选择的点 8
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+大图被选择的点 1026, 小图被选择的点 10
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+画出了图0 和小图940 的匹配图
+开始reset
+大图被选择的点 0, 小图被选择的点 8
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 8, 小图被选择的点 19
+大图被选择的点 2, 小图被选择的点 22
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+大图被选择的点 8, 小图被选择的点 8
+大图被选择的点 1027, 小图被选择的点 3
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+大图被选择的点 197, 小图被选择的点 10
+大图被选择的点 512, 小图被选择的点 6
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+大图被选择的点 1026, 小图被选择的点 0
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+画出了图0 和小图945 的匹配图
+开始reset
+大图被选择的点 2, 小图被选择的点 24
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 14, 小图被选择的点 24
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 512, 小图被选择的点 4
+大图被选择的点 1025, 小图被选择的点 2
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+大图被选择的点 25, 小图被选择的点 25
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 4, 小图被选择的点 12
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+画出了图0 和小图950 的匹配图
+开始reset
+大图被选择的点 1024, 小图被选择的点 13
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 0, 小图被选择的点 9
+大图被选择的点 512, 小图被选择的点 4
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+大图被选择的点 14, 小图被选择的点 24
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 517, 小图被选择的点 0
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+画出了图0 和小图955 的匹配图
+开始reset
+大图被选择的点 517, 小图被选择的点 8
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 1, 小图被选择的点 6
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+画出了图0 和小图960 的匹配图
+开始reset
+大图被选择的点 1, 小图被选择的点 1
+大图被选择的点 512, 小图被选择的点 7
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+大图被选择的点 1027, 小图被选择的点 14
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 1027, 小图被选择的点 12
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+画出了图0 和小图965 的匹配图
+开始reset
+大图被选择的点 450, 小图被选择的点 17
+大图被选择的点 1024, 小图被选择的点 7
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+大图被选择的点 1031, 小图被选择的点 6
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 264, 小图被选择的点 25
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 7, 小图被选择的点 21
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 1, 小图被选择的点 2
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+画出了图0 和小图970 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 513, 小图被选择的点 26
+大图被选择的点 1025, 小图被选择的点 2
+大图被选择的点 1034, 小图被选择的点 11
+Ep_i 	0, the ep_r is 	-22.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 1027, 小图被选择的点 2
+大图被选择的点 0, 小图被选择的点 14
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+画出了图0 和小图975 的匹配图
+开始reset
+大图被选择的点 64, 小图被选择的点 26
+大图被选择的点 1025, 小图被选择的点 4
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+画出了图0 和小图980 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 129, 小图被选择的点 3
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 1034, 小图被选择的点 15
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 7, 小图被选择的点 18
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+大图被选择的点 1026, 小图被选择的点 4
+大图被选择的点 4, 小图被选择的点 9
+Ep_i 	0, the ep_r is 	-24.00, the step is 	27
+画出了图0 和小图985 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 1036, 小图被选择的点 0
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+画出了图0 和小图990 的匹配图
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 1034, 小图被选择的点 11
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+大图被选择的点 14, 小图被选择的点 27
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+画出了图0 和小图995 的匹配图
+开始reset
+大图被选择的点 0, 小图被选择的点 9
+Ep_i 	0, the ep_r is 	-26.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+开始reset
+Ep_i 	0, the ep_r is 	-28.00, the step is 	27
+save res

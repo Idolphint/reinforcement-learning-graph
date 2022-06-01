@@ -181,25 +181,26 @@ def train_loop(args):
     if args.test:
         validation(args, model, test_pts, logger, 0, 0, verbose=True)
     else:
-        print("begin train")
-        for epoch in range(args.n_batches // args.eval_interval):
-            batch_n = 0
-            for i in range(args.eval_interval):
-                in_queue.put(("step", None))
-            for i in range(args.eval_interval):
-                msg, params = out_queue.get()
-                train_loss, train_acc = params
-                if batch_n % 100 == 0:
-                    print("Batch {}. Loss: {:.4f}. Training acc: {:.4f}".format(
-                        batch_n, train_loss, train_acc))
-                logger.add_scalar("Loss/train", train_loss, batch_n)
-                logger.add_scalar("Accuracy/train", train_acc, batch_n)
-                batch_n += 1
-            acc = validation(args, model, test_pts, logger, batch_n, epoch)
-            if acc > best_acc:
-                print("Saving {}, test acc {}".format(args.model_path, acc))
-                torch.save(model.state_dict(), args.model_path)
-                best_acc = acc
+        for data_idx in range(len(args.dataset)):
+            print("begin train", args.dataset[data_idx])
+            for epoch in range(args.n_batches // args.eval_interval):
+                batch_n = 0
+                for i in range(args.eval_interval):
+                    in_queue.put(("step", None))
+                for i in range(args.eval_interval):
+                    msg, params = out_queue.get()
+                    train_loss, train_acc = params
+                    if batch_n % 100 == 0:
+                        print("Batch {}. Loss: {:.4f}. Training acc: {:.4f}".format(
+                            batch_n, train_loss, train_acc))
+                    logger.add_scalar("Loss/train", train_loss, batch_n)
+                    logger.add_scalar("Accuracy/train", train_acc, batch_n)
+                    batch_n += 1
+                acc = validation(args, model, test_pts, logger, batch_n, epoch)
+                if acc > best_acc:
+                    print("Saving {}, test acc {}".format(args.model_path, acc))
+                    torch.save(model.state_dict(), args.model_path)
+                    best_acc = acc
 
     for i in range(args.n_workers):
         in_queue.put(("done", None))

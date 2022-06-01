@@ -7,6 +7,7 @@ class GraphSet:
         self.__vertexSet = []
         self.__edgeSet = []
         self.__VESet = {}
+        print("warning!!!! 当前数据集不考虑边权")
         try:
             with open(inputFile, "r") as fin:
                 lineNum = -1
@@ -43,7 +44,7 @@ class GraphSet:
                             print
                             "Class GraphSet __init__() line edge error!"
                             exit()
-                        curEdgeSet.append((int(lineList[1]), int(lineList[2]), int(lineList[3])))
+                        curEdgeSet.append((int(lineList[1]), int(lineList[2]), 1)) # int(lineList[3])))
 
                     else:
                         # empty line!
