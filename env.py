@@ -46,8 +46,8 @@ class GNN_env(object):
         self.combo = [1,-1,-1, 0]
         sub_Vset = self.__sub.curVSet(offJ)
         main_Vset = self.__origin.curVSet(offset)
-        gt_dict = self.gt_json[self.small_n*offset+offJ]
-        gt_dict = {int(a):b for a,b in gt_dict.items()}
+        # gt_dict = self.gt_json[self.small_n*offset+offJ]
+        # gt_dict = {int(a):b for a,b in gt_dict.items()}
         # 选择一个随机的开始点
         small_idx = np.random.randint(0, len(sub_Vset.keys()))
         for i in main_Vset.keys():

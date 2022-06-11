@@ -159,7 +159,7 @@ def train_loop(args):
 
     data_source = make_data_source(args, 0)
     workers = []
-    best_acc = 0
+    best_acc = 0.85
     for i in range(args.n_workers):
         worker = mp.Process(target=train, args=(args, model, data_source,
             in_queue, out_queue))
