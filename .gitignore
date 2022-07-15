@@ -7,6 +7,8 @@ __pycache__/
 .idea/
 expTD3*/
 gcn/runs/
+visual_RL/
+data/
 *.pptx
 *.pdf
 

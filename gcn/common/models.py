@@ -32,11 +32,13 @@ class BaselineMLP(nn.Module):
     def criterion(self, pred, _, label):
         return F.nll_loss(pred, label)
 
+
 # Order embedder model -- contains a graph embedding model `emb_model`
 class OrderEmbedder(nn.Module):
     def __init__(self, input_dim, hidden_dim, args):
         super(OrderEmbedder, self).__init__()
-        self.emb_model = SkipLastGNN(input_dim, hidden_dim, hidden_dim, args)
+        # self.emb_model = SkipLastGNN(input_dim, hidden_dim, hidden_dim, args)
+        self.emb_model = LttGNN(input_dim, hidden_dim=16, args=args)
         self.margin = args.margin
         self.use_intersection = False
 
@@ -79,6 +81,70 @@ class OrderEmbedder(nn.Module):
         relation_loss = torch.sum(e)
 
         return relation_loss
+
+class LttGNN(nn.Module):
+    def __init__(self, input_dim, hidden_dim, args):
+        super(LttGNN, self).__init__()
+        self.n_layers = args.n_layers
+        self.pre_mp = nn.Sequential(nn.Linear(input_dim, hidden_dim),
+                                    nn.ReLU())
+        self.gcn1 = GINConv(nn.Sequential(
+                nn.Linear(hidden_dim, hidden_dim), nn.ReLU(), nn.Linear(hidden_dim, hidden_dim)
+                ))
+        self.gcn2 = GINConv(nn.Sequential(
+                nn.Linear(hidden_dim*2, hidden_dim), nn.ReLU(), nn.Linear(hidden_dim, hidden_dim)
+                ))
+        # self.gcn3 = GINConv(nn.Sequential(
+        #         nn.Linear(hidden_dim*3, hidden_dim), nn.ReLU(), nn.Linear(hidden_dim, hidden_dim)
+        #         ))
+        self.post_mp = nn.Sequential(
+            nn.Linear(hidden_dim*3, hidden_dim),
+            nn.Sigmoid(),
+            nn.Linear(hidden_dim, hidden_dim),
+            # nn.BatchNorm1d(output_dim, eps=1e-5, momentum=0.1),
+            nn.ReLU())
+            # nn.Linear(hidden_dim, 256), nn.ReLU(),
+            # # nn.BatchNorm1d(256, eps=1e-5, momentum=0.1),
+            # nn.Linear(256, hidden_dim), nn.Sigmoid())
+        self.dropout = args.dropout
+        self.hidden_dim = hidden_dim
+
+    def forward(self, data, need_pool=True, return_batch=False):
+        x, edge_index, batch = data.node_feature, data.edge_index, data.batch
+        edge_weight = data.edge_feature
+        if len(x.shape) == 1:
+            x = x.unsqueeze(dim=1).float()
+        # n*1 这里的edge就是节点对，2*n_edge
+        x = self.pre_mp(x)  # n * 64 先将node_label编码为64维的向量
+        # all_emb = x.unsqueeze(1)  # n* 1* 64
+        emb = x
+        if edge_weight is not None:
+            edge_weight = edge_weight.float()
+        x = self.gcn1(emb, edge_index, edge_weight)
+        # x = F.relu(x)
+        x = F.dropout(x, p=self.dropout, training=self.training)
+        emb = torch.cat((emb, x), 1)
+        x = self.gcn2(emb, edge_index, edge_weight)
+        # x = F.relu(x)
+        x = F.dropout(x, p=self.dropout, training=self.training)
+        emb = torch.cat((emb, x), 1)
+        # x = self.gcn3(emb, edge_index, edge_weight)
+        # x = F.relu(x)
+        # x = F.dropout(x, p=self.dropout, training=self.training)
+        # emb = torch.cat((emb, x), 1)
+        if need_pool:
+            emb = pyg_nn.global_add_pool(emb, batch)
+        # emb = emb.reshape(-1, 10, 4*self.hidden_dim)
+        # emb = torch.sum(emb, dim=1)
+        emb = self.post_mp(emb)
+        if random.random() < 0.0001:
+            print("check emb", emb)
+        if return_batch:
+            return emb, batch
+        return emb
+
+    def loss(self, pred, label):
+        return F.nll_loss(pred, label)
 
 class SkipLastGNN(nn.Module):
     def __init__(self, input_dim, hidden_dim, output_dim, args):
@@ -133,6 +199,7 @@ class SkipLastGNN(nn.Module):
             # nn.BatchNorm1d(256, eps=1e-5, momentum=0.1),
             nn.Linear(256, hidden_dim), nn.Sigmoid())
         # self.batch_norm = nn.BatchNorm1d(output_dim, eps=1e-5, momentum=0.1)
+        self.post_input_dim = post_input_dim
         self.skip = args.skip
         self.conv_type = args.conv_type
 
@@ -205,11 +272,15 @@ class SkipLastGNN(nn.Module):
             if self.skip == 'learnable':
                 all_emb = torch.cat((all_emb, x.unsqueeze(1)), 1)
 
-        # x = pyg_nn.global_mean_pool(x, batch)
+        # x = pyg_nn.global_sort_pool(x, batch, k=10)
         if need_pool:
-            emb = pyg_nn.global_add_pool(emb, batch)
+            node, c = emb.shape
+            emb = pyg_nn.global_sort_pool(emb, batch, k=10)
+
+            emb = emb.reshape(-1, 10,c)
+            emb = torch.sum(emb, dim=1)
+            # emb = pyg_nn.global_add_pool(emb)
         emb = self.post_mp(emb)
-        # print("after post mp", emb, emb.shape)
         # emb = self.batch_norm(emb)   # TODO: test
         #out = F.log_softmax(emb, dim=1)
         return emb

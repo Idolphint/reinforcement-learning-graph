@@ -128,7 +128,9 @@ def get_dataset(task, dataset_len, sizes, size_prob=None, **kwargs):
 
 
 def main():
-    sizes = np.arange(6, 31)
+    # 可见，这种方式可以产生想要的dataset，问题在于采样小图
+    sizes = np.arange(1000, 1001)
+    print(sizes)
     dataset = get_dataset("graph", 10, sizes)
     print('On the fly generated dataset has length: {}'.format(len(dataset)))
     example_graph = dataset[0]

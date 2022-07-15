@@ -125,78 +125,79 @@ def DFS(idx, graph, sub_num):
         idx = nei_rand
     return node_list
 
-def Main2sub(big_num, sub_num, sub_graph_n, max_label=5, big_edge_pro=0.1):
+def Main2sub(big_num, big_graph_n, sub_num, sub_graph_n, max_label=5, big_edge_pro=0.1):
     # 首先生成子图与大图的对应，并写入gt_file
     if big_edge_pro > 1:  # 如果pro为小数则为概率，否则为度
         big_edge_pro /= big_num
-
-    # 这里给出大图的顶点和label
     out_big_graph_str = []
-    big_node_label_dict = {}
-    out_big_graph_str.append("t # 0\n")
-    for i in range(big_num):
-        label = np.random.randint(max_label)
-        # label = 0
-        big_node_label_dict[i] = label
-        out_big_graph_str.append("v %d %d\n"%(i, label))
-
-    #计算大图的边
-    edge_big_graph = []
-    for i in range(big_num):
-        neighbor_4big_node = {}
-        for j in range(i):
-            if np.random.rand()<big_edge_pro: #假如这是一条边
-                label = np.random.randint(max_label)
-                neighbor_4big_node[j] = label  #g[i].append(j)
-                edge_big_graph[j][i] = label
-                out_big_graph_str.append("e %d %d %d\n" % (i, j, label))
-        edge_big_graph.append(neighbor_4big_node)
-    out_big_graph_str.append("t # 1\n")
-
-    # 生成小图的点
-    sub_node_list = []
-    for i in range(sub_graph_n):
-        graph_idx = random.randint(0, big_num-1)
-        node_list = DFS(graph_idx, edge_big_graph.copy(), sub_num)
-        if node_list is not None:
-            sub_node_list.append(node_list)
-
-    gt = [{s_idx:b_idx for s_idx, b_idx in enumerate(node_list)} for node_list in sub_node_list]
-    gt_reverse = [{b_idx:s_idx for s_idx, b_idx in enumerate(node_list)} for node_list in sub_node_list]
-    with open("./gt_datanode%d_querynode%d_query%d_maxlabel%d.json"%(big_num, sub_num, len(sub_node_list), max_label), 'w') as fin:
-        json.dump(gt, fin, ensure_ascii=True, indent=True)
-        print("gt saved!")
-
-    # 给出对应的小图点Label
-    sub_node_set = []
-    for subgraph_node in gt:
-        cur_node_label = {}
-        for s_idx, b_idx in subgraph_node.items():
-            label = big_node_label_dict[b_idx]
-            cur_node_label[s_idx] = label
-        sub_node_set.append(cur_node_label)
-
-    # 计算小图的边
     out_samll_graph_str = []
-    for i, cur_node_label in enumerate(sub_node_set):
-        # 输出小图的点
-        out_samll_graph_str.append("t # %d\n" % i)
-        for node_idx, label in cur_node_label.items():
-            out_samll_graph_str.append("v %d %d\n" % (node_idx, label))
+    for bn in range(big_graph_n):
+        # 这里给出大图的顶点和label
+        big_node_label_dict = {}
+        out_big_graph_str.append("t # 0\n")
+        for i in range(big_num):
+            label = np.random.randint(max_label)
+            # label = 0
+            big_node_label_dict[i] = label
+            out_big_graph_str.append("v %d %d\n"%(i, label))
 
-        node_dict_reverse = gt_reverse[i]
-        for big_a_idx, sub_a_idx in node_dict_reverse.items():
-            a_neighbor_big = edge_big_graph[big_a_idx]
-            for big_b, edge_label in a_neighbor_big.items():
-                if big_b in node_dict_reverse.keys():
-                    small_b = node_dict_reverse[big_b]
-                    out_samll_graph_str.append("e %d %d %d\n"%(sub_a_idx, small_b, edge_label))
-    out_samll_graph_str.append("t # %d\n" % len(sub_node_set))
+        #计算大图的边
+        edge_big_graph = []
+        for i in range(big_num):
+            neighbor_4big_node = {}
+            for j in range(i):
+                if np.random.rand()<big_edge_pro: #假如这是一条边
+                    label = np.random.randint(max_label)
+                    neighbor_4big_node[j] = label  #g[i].append(j)
+                    edge_big_graph[j][i] = label
+                    out_big_graph_str.append("e %d %d %d\n" % (i, j, label))
+            edge_big_graph.append(neighbor_4big_node)
+        out_big_graph_str.append("t # 1\n")
 
-    with open("./graphdb_node%d.data"%big_num, 'w') as fb:
+        # 生成小图的点
+        sub_node_list = []
+        for i in range(sub_graph_n//big_graph_n):
+            graph_idx = random.randint(0, big_num-1)
+            node_list = DFS(graph_idx, edge_big_graph.copy(), sub_num)
+            if node_list is not None:
+                sub_node_list.append(node_list)
+
+        gt = [{s_idx:b_idx for s_idx, b_idx in enumerate(node_list)} for node_list in sub_node_list]
+        gt_reverse = [{b_idx:s_idx for s_idx, b_idx in enumerate(node_list)} for node_list in sub_node_list]
+        with open("./gt_datanode%d_%d_querynode%d_query%d_maxlabel%d.json"%(big_num, big_graph_n, sub_num, len(sub_node_list), max_label), 'w') as fin:
+            json.dump(gt, fin, ensure_ascii=True, indent=True)
+            print("gt saved!")
+
+        # 给出对应的小图点Label
+        sub_node_set = []
+        for subgraph_node in gt:
+            cur_node_label = {}
+            for s_idx, b_idx in subgraph_node.items():
+                label = big_node_label_dict[b_idx]
+                cur_node_label[s_idx] = label
+            sub_node_set.append(cur_node_label)
+
+        # 计算小图的边
+        for i, cur_node_label in enumerate(sub_node_set):
+            # 输出小图的点
+            out_samll_graph_str.append("t # %d\n" % i)
+            for node_idx, label in cur_node_label.items():
+                out_samll_graph_str.append("v %d %d\n" % (node_idx, label))
+
+            node_dict_reverse = gt_reverse[i]
+            for big_a_idx, sub_a_idx in node_dict_reverse.items():
+                a_neighbor_big = edge_big_graph[big_a_idx]
+                for big_b, edge_label in a_neighbor_big.items():
+                    if big_b in node_dict_reverse.keys():
+                        small_b = node_dict_reverse[big_b]
+                        out_samll_graph_str.append("e %d %d %d\n"%(sub_a_idx, small_b, edge_label))
+        out_samll_graph_str.append("t # %d\n" % len(sub_node_set))
+
+    with open("./graphdb%d_node%d.data"%(big_graph_n, big_num), 'w') as fb:
         fb.writelines(out_big_graph_str)
     with open("./Q_node%d_n%d.data" % (sub_num, sub_graph_n), 'w') as fs:
         fs.writelines(out_samll_graph_str)
+
 
 if __name__ == '__main__':
     # gS, vS, eS = read_data("mygraphdb.data", max_vertex_num=100, max_vertex_label=100)
@@ -206,5 +207,5 @@ if __name__ == '__main__':
     # write_data("Q4_20_20.my", gS, vS, eS)
     # gen_data("Q1000", 6, edge_pro=0.5)
     # sub2Main("Q1000_node6.data")
-    Main2sub(747, 29, 500, 10, big_edge_pro=20)
+    Main2sub(300, 10, 29, 500, 10, big_edge_pro=0.1)
 

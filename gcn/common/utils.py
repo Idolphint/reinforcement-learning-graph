@@ -25,7 +25,7 @@ def sample_neigh(graphs, size):
     max_graph = None
     while True:
         # graph = random.choice(graphs)
-        if cannot_find > 30:
+        if cannot_find > 10:
             # print("visit too many time", max_graph.edges, max_neigh)
             return max_graph, max_neigh
         idx = dist.rvs()

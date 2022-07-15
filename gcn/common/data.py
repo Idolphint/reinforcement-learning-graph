@@ -12,7 +12,7 @@ from torch_geometric.datasets import TUDataset, PPI, QM9
 import torch_geometric.utils as pyg_utils
 from tqdm import tqdm
 import scipy.stats as stats
-
+from dataCenter import GraphSet, facebookGraph
 from gcn.common import combined_syn
 from gcn.common import feature_preprocess
 from gcn.common import utils
@@ -45,6 +45,14 @@ def load_dataset(name):
         dataset = QM9(root="../data/QM9")
     elif name == "atlas":
         dataset = [g for g in nx.graph_atlas_g()[1:] if nx.is_connected(g)]
+    elif name == "ltt":
+        dataset = GraphSet("../data/graphdb250_node300.data").toNXGraphList()
+    elif name == "facebook":
+        dataset = [facebookGraph(g) for g in ['0', '107', '348', '414',
+                                              '686', '698', '1684', '1912',
+                                              '3437', '3980']]
+    elif name == "amazon":
+        dataset = GraphSet("../data/com-amazon.ungraph.txt", init_method="amazon-sub", max_size=3000).toNXGraphList()
     if task == "graph":
         train_len = int(0.8 * len(dataset))
         train, test = [], []
@@ -76,7 +84,7 @@ class OTFSynDataSource(DataSource):
     DeepSNAP transforms are used to generate the positive and negative examples.
     """
 
-    def __init__(self, max_size=59, min_size=5, n_workers=4,
+    def __init__(self, max_size=599, min_size=5, n_workers=4,
                  max_queue_size=256, node_anchored=False):
         self.closed = False
         self.max_size = max_size
@@ -125,7 +133,7 @@ class OTFSynDataSource(DataSource):
                     else:
                         d = 1 if train else 0
                         size = random.randint(self.min_size + offset - d,
-                                              len(graph.G) - 1 + offset)
+                                              max(self.min_size+offset+1, len(graph.G) // 2 + offset))
                 _, neigh = utils.sample_neigh([graph.G], size)
 
                 if self.node_anchored:
@@ -144,7 +152,7 @@ class OTFSynDataSource(DataSource):
                             for u, v in random.sample(non_edges, random.randint(1,
                                                                                 min(len(non_edges), 5))):
                                 neigh.add_edge(u, v)
-                    else:  # perturb anchor
+                    else:  # perturb anchor标定anchor点为1
                         anchor = random.choice(list(neigh.nodes))
                         for v in neigh.nodes:
                             neigh.nodes[v]["node_feature"] = (torch.ones(1) if

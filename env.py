@@ -9,22 +9,23 @@ max_label = 5
 
 
 class GNN_env(object):
-    def __init__(self, initial_k, mainGraphSet, subGraphSet, gt_json):
+    def __init__(self, initial_k, mainGraphSet, subGraphSet):
         self.__sub = subGraphSet
         self.__origin = mainGraphSet
         self.k = initial_k
         self.result = {}
         self.re_reflect_dict = None
-        _, big_node, small_node, small_n, max_l = gt_json.split('_')
-        self.big_node = int(big_node[-4:])
-        self.small_node = int(small_node[-2:])
-        self.small_n = int(small_n[-4:])
-        max_label = int(max_l[-7:-5])
-        self.gt_json = json.load(open(gt_json, 'r'))
+        # _, big_node, small_node, small_n, max_l = gt_json.split('_')
+        # self.big_node = int(big_node[-4:])
+        # self.small_node = int(small_node[-2:])
+        # self.small_n = int(small_n[-4:])
+        # max_label = int(max_l[-7:-5])
+        # self.gt_json = json.load(open(gt_json, 'r'))
         self.combo = [-1,-1,-1, 0]
 
     def add_node2_state(self, offs, offb, subG, mainG, action):
         # state是一个adj+fre的矩阵，将新节点的邻居和fre添加到ori_state里面
+        self.result[action[0]] = action[1]
         sub_node_list = list(self.result.keys())
         big_node_list = list(self.result.values())
         # sub_node_list.append(action[0])
@@ -35,25 +36,28 @@ class GNN_env(object):
         selected_samll_graph = self.__sub.getSubMap(offs, sub_node_list+subNeighbor)
         selected_big_graph = self.__origin.getSubMap(offb, big_node_list+gNeighbor)
 
-        selected_samll_graph.mask = len(sub_node_list)
-        selected_big_graph.mask = len(big_node_list)
+        selected_samll_graph.mask = [np.argwhere(np.array(selected_samll_graph.nodes)==i)[0][0] for i in sub_node_list]
+        selected_big_graph.mask = [np.argwhere(np.array(selected_big_graph.nodes)==i)[0][0] for i in big_node_list]
 
         return selected_samll_graph, selected_big_graph
 
     def reset(self, offset, offJ):
-        print("开始reset")
+        print("==================开始reset=========", offset, offJ)
         self.result = {}
         self.combo = [1,-1,-1, 0]
-        sub_Vset = self.__sub.curVSet(offJ)
-        main_Vset = self.__origin.curVSet(offset)
+        sub_Vset = list(self.__sub.curVSet(offJ).keys())
+        main_Vset = list(self.__origin.curVSet(offset).keys())
         # gt_dict = self.gt_json[self.small_n*offset+offJ]
         # gt_dict = {int(a):b for a,b in gt_dict.items()}
         # 选择一个随机的开始点
-        small_idx = np.random.randint(0, len(sub_Vset.keys()))
-        for i in main_Vset.keys():
-            if self.isMeetRules(small_idx, i, offJ, offset, self.result):
-                self.result[small_idx] = i
-                break
+        small_idx = random.choice(sub_Vset)
+        if self.isMeetRules(small_idx, small_idx, offJ, offset, self.result):
+            print("vf2 may right")
+        self.result[small_idx] = small_idx
+        # for i in main_Vset:
+        #     if self.isMeetRules(small_idx, i, offJ, offset, self.result):
+        #         self.result[small_idx] = i
+        #         break
 
         selected_samll_node = list(self.result.keys())
         selected_big_node = list(self.result.values())
@@ -63,8 +67,10 @@ class GNN_env(object):
         selected_samll_graph = self.__sub.getSubMap(offJ, selected_samll_node+subNeighbor)
         selected_big_graph = self.__origin.getSubMap(offset, selected_big_node+gNeighbor)
 
-        selected_samll_graph.mask = len(selected_samll_node)
-        selected_big_graph.mask = len(selected_big_node)
+        selected_samll_graph.mask = [np.argwhere(np.array(selected_samll_graph.nodes) == i)[0][0] for i in
+                                     selected_samll_node]
+        selected_big_graph.mask = [np.argwhere(np.array(selected_big_graph.nodes) == i)[0][0] for i in
+                                   selected_big_node]
         return selected_samll_graph, selected_big_graph
 
     def preSucc(self, vertexNeighbor, map, type):
@@ -92,11 +98,10 @@ class GNN_env(object):
     def edgeLabel(self, offset, index1, index2, type):
 
         if type:
-            ESet = self.__origin.curVESet(offset)
+            return self.__origin.curESet(offset, index1, index2)
+            # ESet = self.__origin.curVESet(offset)
         else:
-            ESet = self.__sub.curVESet(offset)
-
-        return ESet[index1][index2]
+            return self.__sub.curESet(offset, index1, index2)
 
     def isMeetRules(self, vs, vb, offs, offb, result):
 
@@ -119,12 +124,12 @@ class GNN_env(object):
         gVSet = self.__origin.curVSet(offb)
 
         if subVSet[vs] != gVSet[vb]:
-            # print "vertex label different!"
+            # print("vertex label different!")
             return False
 
         # notice, when result is empty, first pair should be added when their vertexLabels are the same!
-        if not result:
-            return True
+        # if not result:
+        #     return True
 
         vsNeighbor = self.__sub.neighbor(offs, vs)
         vbNeighbor = self.__origin.neighbor(offb, vb)
@@ -146,7 +151,7 @@ class GNN_env(object):
 
         # 3,4 rule
         if (len(vsPre) > len(vbPre)):  # 子图的邻居数应该小于等于大图的邻居
-            # print "len(vsPre) > len(vbPre)!"
+            # print("len(vsPre) > len(vbPre)!",vsNeighbor, vbNeighbor, vsPre, vbPre)
             return False
 
         for pre in vsPre:
@@ -156,7 +161,10 @@ class GNN_env(object):
                 return False
             if pre in result and self.edgeLabel(offs, vs, pre, 0) != self.edgeLabel(offb, vb, result[pre], 1):
                 # 前驱结点与当前点的边-label应该一样
-                # print "eLabel of vs-pre different with eLabel of vb-result[pre]!"
+                # print("eLabel of vs-pre different with eLabel of vb-result[pre]!",
+                #       vs, pre, vb, result[pre],
+                #       self.edgeLabel(offs, vs, pre, 0),
+                #       self.edgeLabel(offb, vb, result[pre], 1))
                 return False
 
         '''   
@@ -173,10 +181,13 @@ class GNN_env(object):
         '''
 
         # 5,6 rules
-        len1 = len(set(vsNeighbor) & set(subMNeighbor))  # vs的邻居和子图的所有点的邻居的交 ？？？？？
-        len2 = len(set(vbNeighbor) & set(gMNeighbor))
+        len1 = len(set(vsNeighbor) & set(subMNeighbor+subMap))  # vs的邻居和子图的所有点的邻居的交 ？？？？？
+        len2 = len(set(vbNeighbor) & set(gMNeighbor+gMap))
         if len1 > len2:  # 也就是vs的邻居数不能大于vb的邻居数？
-            # print("5,6 rules mismatch!大图邻居数太少？")
+            # print("5,6 rules mismatch!大t邻居数太少？", len(vsNeighbor),
+            #       len(vbNeighbor),
+            #       set(vsNeighbor) & set(subMNeighbor),
+            #       set(vbNeighbor) & set(gMNeighbor))
             return False
 
         # 7 rule
@@ -193,7 +204,7 @@ class GNN_env(object):
         if not isinstance(self.result, dict):
             print("Class Vf Match() arguments type error! result expected dict!")
         curMap = Map(self.result)
-        if curMap.isCovered(self.__sub.curVSet(offJ)):  # 似乎不会来到这句
+        if curMap.isCovered(list(self.__sub.curVSet(offJ).keys())):  # 似乎不会来到这句
             print("yes!!! match graph!!!")
             print(self.result)
             return 0
@@ -202,17 +213,22 @@ class GNN_env(object):
         # 2. 如何保证选择的action是考虑过子图结构的
         # print("大图被选择的点", select_idx)
         # print("主图的表示为: ", node_representation, graph_adj)
-        reward = -1
+        reward = -0.2
 
         # for offb in range(len(self.__sub.curVSet(offJ))):
             # 如果小图中的点没有被选择过
         if (select_idx_s not in self.result.keys()) and self.isMeetRules(select_idx_s, select_idx_b, offJ,
                                 offset, self.result):
             self.result[select_idx_s] = select_idx_b
-            print("大图被选择的点 %d, 小图被选择的点 %d" % (select_idx_b, select_idx_s))
             # print("distance from 原图到 action", distance_action)
             reward = 1
             # break
+        if select_idx_s == select_idx_b and \
+                (select_idx_s not in self.result.keys() or
+                 select_idx_s not in self.result.values()):
+            reward += 1
+        if reward > 0:
+            print("大图被选择的点 %d, 小图被选择的点 %d" % (select_idx_b, select_idx_s))
         self.result[select_idx_s] = select_idx_b
 
         return reward
@@ -228,8 +244,9 @@ class GNN_env(object):
         done = 0
         reward = r1_reward + (sum(self.combo[:-1]) == 3)
         curMap = Map(self.result)
-        if curMap.isCovered(self.__sub.curVSet(offJ)):
+        if curMap.isCovered(list(self.__sub.curVSet(offJ).keys())):
             done = 1
+            # reward += 10
         return subG, mainG, reward, done, r1_reward
 
 if __name__ == '__main__':

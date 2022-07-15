@@ -1,6 +1,13 @@
 import torch
 import torch.nn as nn
+import torch_geometric.nn as pyg_nn
+import gcn.common.models as gcn_model
+from  gcn.config import get_default_config
+from util import get_order_model, vis_graph_match, nx2batch
 
+
+model_args = get_default_config()
+order_model = get_order_model(model_args)
 
 class NTN(torch.nn.Module):
     def __init__(self, D, k):
@@ -70,18 +77,28 @@ class Critic(nn.Module):
         super(Critic, self).__init__()
         self.margin = args.margin
         self.use_intersection = False
-        self.fc1 = nn.Linear(64*64, 64)
-        self.Sigmoid = nn.Sigmoid()
-        self.fc2 = nn.Linear(64, 1)
+        self.fc1 = nn.Linear(2, 2)
+        self.relu = nn.ReLU()
+        self.fc2 = nn.Linear(20, 1)
 
     def forward(self, emb_small, emb_big, similar):  # next_state
+        #若similar全为1，那么fc计算之前的矩阵相乘不过是计算大图点i的m维特征之和*小图点j的m维特征值和
+        #那自然可以认为毫无意义，还不如大图*小图T再与similar拼接呢
         emb_small_T = torch.transpose(emb_small, 1, 0)
+        similar_T = torch.transpose(similar, 1,0)
 
-        x = torch.matmul(emb_small_T, similar)
-        x = torch.matmul(x, emb_big)
-        x = x.view(-1, 64*64)
-        x = self.Sigmoid(self.fc1(x))
-        x = self.fc2(x)
+        x = torch.matmul(emb_big, emb_small_T)
+        bn, sn = similar_T.shape
+        x = torch.cat([x,similar_T],dim=-1)
+        x = x.view(-1, 2)
+        x = self.relu(self.fc1(x)).view(bn,-1)
+        x = pyg_nn.global_sort_pool(x, torch.zeros([bn]).long().to(x.device), k=5)  # 得到5*sn*2的向量？
+        if x.shape[1] < 20:
+            pad = torch.zeros([1, 20-x.shape[1]]).float().to(x.device)
+            x = torch.cat([x,pad], dim=-1).view(-1)
+        else:
+            x = x.view(-1)[:20]
+        x = self.fc2(x).unsqueeze(0)
 
         # 在这里a是大图，b是小图
         # raw_pred = torch.max(torch.zeros_like(emb_as,
@@ -124,10 +141,98 @@ class Critic(nn.Module):
             device=emb_small.device), emb_small - emb_big)**2, dim=1)
 
         margin = self.margin
-        e[labels == 0] = torch.max(torch.tensor(0.0,
-            device=emb_small.device), margin - e)[labels == 0]
+        e[labels <= 0] = torch.max(torch.tensor(0.0,
+            device=emb_small.device), margin - e)[labels <= 0]
 
         relation_loss = torch.sum(e)
 
         return relation_loss
 
+class Actor(nn.Module):
+    # input shape: batch, big_n, big_n], [batch, sub_n, sub_n], [batch, big_n, big_n]
+    # out shape: [batch, big_n, sub_n]
+    def __init__(self, device):
+        super(Actor, self).__init__()
+        self.device = device
+        self.emb_model = order_model.emb_model.to(self.device)
+        self.margin = 0.1
+
+    def emb_graph(self, graph):
+        x, batch = self.emb_model(nx2batch(graph, self.device),
+                                  need_pool=False, return_batch=True)
+
+        return x, batch
+
+    def forward(self, subNMNeighbor, gNMNeighbor,
+                return_action=False, use_noise=False, noise_clip=0.001, batchify=False):
+        ori_fea_s, batch_s = self.emb_graph(subNMNeighbor)
+        ori_fea_b, batch_b = self.emb_graph(gNMNeighbor)
+        # for i in subNMNeighbor.mask:
+        # print(batch_b.shape, ori_fea_b.shape, batch_s.shape, ori_fea_s.shape)
+        # print(batch_s)
+        if not batchify:
+            subNMNeighbor = [subNMNeighbor]
+            gNMNeighbor = [gNMNeighbor]
+        res_action_list = []
+        pred_list = []
+        fea_s_list = []
+        fea_b_list = []
+        ret_action = []
+        for i, (subg, gg) in enumerate(zip(subNMNeighbor, gNMNeighbor)):
+            fea_s_o = ori_fea_s[batch_s==i]
+            fea_b_o = ori_fea_b[batch_b==i]
+            fea_s_o[subg.mask, :] = 1.0
+            fea_b_o[gg.mask, :] = -1.0
+            q_size, c= fea_s_o.shape
+            data_size,_ = fea_b_o.shape
+            fea_s = fea_s_o.unsqueeze(1)
+            fea_s = fea_s.repeat(1,data_size,1).reshape(q_size*data_size, c)
+            fea_b = fea_b_o.unsqueeze(0)
+            fea_b = fea_b.repeat(q_size,1,1).reshape(q_size*data_size, c)
+            pred = torch.sum(torch.max(torch.zeros_like(fea_s,
+                                                 device=fea_s.device), fea_s - fea_b) ** 2, dim=1)
+
+            # print(pred.shape, q_size, data_size, q_size*data_size, pred)
+            if use_noise:
+                noise = torch.randn_like(pred) * noise_clip
+                pred += noise
+            pred = 1-pred
+            for a in subg.mask:
+                for b in gg.mask:
+                    pred[a*data_size+b] = -1
+            action = torch.argmax(pred)
+            action = action.item()
+            res_action = [0, 0]
+            res_action[0] = list(subg.nodes())[action // data_size]
+            res_action[1] = list(gg.nodes())[action % data_size]
+            res_action_list.append(res_action)
+            pred_list.append(pred.reshape(q_size, data_size))
+            fea_s_list.append(fea_s_o)
+            fea_b_list.append(fea_b_o)
+            ret_action = [action // data_size, action % data_size]
+        if not batchify:
+            res_action_list = res_action_list[0]
+            pred_list = pred_list[0]
+            fea_s_list = fea_s_list[0]
+            fea_b_list = fea_b_list[0]
+        if return_action:
+            return res_action_list, pred_list, fea_s_list, fea_b_list, ret_action
+        return res_action_list, pred_list, fea_s_list, fea_b_list
+
+    def criterion(self, emb_small, emb_big, labels, action):
+        """Loss function for order emb.
+        """
+        emb_small = emb_small[action[0]]
+        emb_big = emb_big[action[1]]
+        # print(emb_small, emb_big, emb_small.shape, emb_big.shape)
+        e = torch.sum(torch.max(torch.zeros_like(emb_small,
+            device=emb_small.device), emb_small - emb_big)**2, dim=-1)
+        # print(e)
+        margin = self.margin
+        if labels < 0:
+            e = torch.max(torch.tensor(0.0,
+                device=emb_small.device), margin - e)
+
+        relation_loss = torch.sum(e)
+
+        return relation_loss
